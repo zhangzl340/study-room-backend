@@ -1,7 +1,18 @@
 package com.studyroom;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+
+
+@SpringBootApplication
 public class StudyRoomApplication {
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        SpringApplication.run(StudyRoomApplication.class, args);
+        System.out.println("========================================");
+        System.out.println("自习室预约系统启动成功！");
+        System.out.println("接口文档地址: http://localhost:8080/api/doc.html");
+        System.out.println("========================================");
     }
 }

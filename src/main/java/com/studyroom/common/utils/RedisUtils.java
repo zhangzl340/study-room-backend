@@ -449,7 +449,7 @@ public class RedisUtils {
      */
     public Properties info() {
         try {
-            return redisTemplate.getRequiredConnectionFactory().getConnection().info();
+            return redisTemplate.getConnectionFactory().getConnection().info();
         } catch (Exception e) {
             log.error("获取Redis信息失败", e);
             return new Properties();
@@ -461,7 +461,7 @@ public class RedisUtils {
      */
     public void flushDb() {
         try {
-            redisTemplate.getRequiredConnectionFactory().getConnection().flushDb();
+            redisTemplate.getConnectionFactory().getConnection().flushDb();
         } catch (Exception e) {
             log.error("清空Redis数据库失败", e);
         }

@@ -9,7 +9,11 @@ spring:
   main:
     allow-circular-references: true
     allow-bean-definition-overriding: true
-  
+#  security:
+#    user: admin
+#    password: admin
+#    basic:
+#      enabled:false
   # 文件上传配置
   servlet:
     multipart:
@@ -64,7 +68,7 @@ mybatis-plus:
   # 搜索指定包别名
   type-aliases-package: com.studyroom.**.entity
   # 加载全局的配置文件
-  config-location: classpath:mybatis-config.xml
+#  config-location: classpath:mybatis-config.xml
   # mapper.xml文件位置
   mapper-locations: classpath:mapper/**/*.xml
   # 全局配置
@@ -104,12 +108,22 @@ knife4j:
     enable-footer-custom: true
     footer-custom-content: MIT License | Study Room Booking System
     enable-home-custom: true
-    home-custom-path: /doc.html
+    home-custom-path: /swagger-ui/index.html
   production: false
-  basic:
-    enable: false
-    username: admin
-    password: 123456
+
+# SpringDoc配置（Knife4j 4.x基于SpringDoc）
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui/index.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+    show-actuator: false
+    default-consumes-media-type: application/json
+    default-produces-media-type: application/json
 
 # 自习室预约系统配置
 study-room:
@@ -122,7 +136,7 @@ study-room:
   # Redis缓存配置
   redis:
     # 缓存key前缀
-    key-prefix: study-room:
+    key-prefix: "study-room:"
     # 缓存过期时间（秒）
     seat-status-ttl: 300  # 5分钟
     user-token-ttl: 7200  # 2小时

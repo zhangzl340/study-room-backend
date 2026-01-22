@@ -27,21 +27,21 @@ spring:
           log-slow-sql: true
           slow-sql-millis: 2000
 
-  # Redis配置
-  redis:
-    host: ${REDIS_HOST:localhost}
-    port: ${REDIS_PORT:6379}
-    password: ${REDIS_PASSWORD}
-    database: 0
-    lettuce:
-      pool:
-        max-active: 50
-        max-wait: -1ms
-        max-idle: 20
-        min-idle: 5
-      shutdown-timeout: 100ms
-    timeout: 5000ms
-    connect-timeout: 5000ms
+  data: # Redis配置
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD}
+      database: 0
+      lettuce:
+        pool:
+          max-active: 50
+          max-wait: -1ms
+          max-idle: 20
+          min-idle: 5
+        shutdown-timeout: 100ms
+      timeout: 5000ms
+      connect-timeout: 5000ms
 
   # 邮件配置
   mail:
