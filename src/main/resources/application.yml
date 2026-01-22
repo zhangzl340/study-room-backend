@@ -1,0 +1,190 @@
+# 应用配置
+spring:
+  application:
+    name: study-room-booking
+  profiles:
+    active: @spring.profiles.active@  # 使用Maven Profile激活的环境
+  
+  # 开发环境配置（可在application-dev.yml中覆盖）
+  main:
+    allow-circular-references: true
+    allow-bean-definition-overriding: true
+  
+  # 文件上传配置
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 50MB
+  
+  # Jackson配置
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    default-property-inclusion: non_null
+    serialization:
+      write-dates-as-timestamps: false
+      write-date-timestamps-as-nanoseconds: false
+    deserialization:
+      fail-on-unknown-properties: false
+
+# 服务器配置
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+    session:
+      timeout: 30m
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json,application/xml
+    min-response-size: 1024
+  tomcat:
+    connection-timeout: 5000
+    max-connections: 200
+    threads:
+      max: 200
+      min-spare: 10
+
+# 日志配置
+logging:
+  level:
+    com.studyroom: debug
+    org.springframework.security: info
+    org.springframework.web: info
+    com.baomidou.mybatisplus: info
+  file:
+    name: logs/study-room-booking.log
+  logback:
+    rollingpolicy:
+      max-history: 30
+      max-file-size: 10MB
+
+# MyBatis Plus配置
+mybatis-plus:
+  # 搜索指定包别名
+  type-aliases-package: com.studyroom.**.entity
+  # 加载全局的配置文件
+  config-location: classpath:mybatis-config.xml
+  # mapper.xml文件位置
+  mapper-locations: classpath:mapper/**/*.xml
+  # 全局配置
+  global-config:
+    db-config:
+      # 主键类型 0:数据库ID自增 1:用户输入ID 2:全局唯一ID 3:全局唯一ID数字
+      id-type: ASSIGN_ID
+      # 逻辑删除配置
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      # 字段策略
+      insert-strategy: not_null
+      update-strategy: not_null
+  configuration:
+    # 驼峰下划线转换
+    map-underscore-to-camel-case: true
+    # 是否开启缓存
+    cache-enabled: true
+    # 是否开启懒加载
+    lazy-loading-enabled: true
+    # 是否开启结果集自动映射
+    auto-mapping-behavior: partial
+    # 日志实现
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# Knife4j配置
+knife4j:
+  enable: true
+  setting:
+    language: zh-CN
+    enable-swagger-models: true
+    enable-document-manage: true
+    enable-version: true
+    enable-request-cache: true
+    enable-footer: false
+    enable-footer-custom: true
+    footer-custom-content: MIT License | Study Room Booking System
+    enable-home-custom: true
+    home-custom-path: /doc.html
+  production: false
+  basic:
+    enable: false
+    username: admin
+    password: 123456
+
+# 自习室预约系统配置
+study-room:
+  # JWT配置
+  jwt:
+    secret: your-jwt-secret-key-here-change-in-production
+    expiration: 7200000  # 2小时（毫秒）
+    refresh-expiration: 2592000000  # 30天（毫秒）
+  
+  # Redis缓存配置
+  redis:
+    # 缓存key前缀
+    key-prefix: study-room:
+    # 缓存过期时间（秒）
+    seat-status-ttl: 300  # 5分钟
+    user-token-ttl: 7200  # 2小时
+    reservation-lock-ttl: 10  # 10秒（分布式锁）
+    cache-default-ttl: 3600  # 1小时
+
+  # 业务规则配置
+  rule:
+    reservation:
+      max-duration: 240  # 最大预约时长（分钟）
+      min-duration: 30   # 最小预约时长（分钟）
+      advance-reservation-hours: 24  # 可提前预约小时数
+      cancel-deadline-minutes: 30  # 取消截止时间（签到前多少分钟）
+      max-reservation-per-day: 2  # 每日最大预约次数
+      check-in-early-minutes: 15  # 可提前签到时间（分钟）
+      check-in-late-minutes: 30   # 可迟到签到时间（分钟）
+    
+    violation:
+      no-show-deduction: 10  # 爽约扣分
+      late-checkin-deduction: 5  # 迟到扣分
+      early-checkout-deduction: 3  # 提前离开扣分
+      no-checkout-deduction: 8  # 未签退扣分
+    
+    credit:
+      initial-score: 100  # 初始信用分
+      max-score: 200  # 最高信用分
+      min-score: 0  # 最低信用分
+      reservation-completed-reward: 1  # 完成预约奖励
+
+  # 文件上传配置
+  upload:
+    max-size: 10MB
+    avatar-path: /uploads/avatars/
+    room-image-path: /uploads/rooms/
+    face-image-path: /uploads/faces/
+    qrcode-path: /uploads/qrcodes/
+
+  # 二维码配置
+  qrcode:
+    width: 300
+    height: 300
+    format: png
+    expire-minutes: 5  # 二维码有效期（分钟）
+
+  # WebSocket配置
+  websocket:
+    enabled: true
+    path: /ws
+    allowed-origins: "*"
+    heartbeat-interval: 30000  # 心跳间隔（毫秒）
+
+# 健康检查
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+  info:
+    env:
+      enabled: true

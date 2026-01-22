@@ -1,0 +1,122 @@
+# 生产环境配置
+spring:
+  # 数据源配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:study_room_db}?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&useSSL=true&requireSSL=true&verifyServerCertificate=false
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD}
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      # 连接池配置（生产环境调大）
+      initial-size: 10
+      min-idle: 10
+      max-active: 100
+      max-wait: 60000
+      # 连接有效性检查
+      validation-query: SELECT 1
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      # 监控配置（生产环境关闭或限制IP）
+      stat-view-servlet:
+        enabled: false
+      filter:
+        stat:
+          enabled: true
+          log-slow-sql: true
+          slow-sql-millis: 2000
+
+  # Redis配置
+  redis:
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_PORT:6379}
+    password: ${REDIS_PASSWORD}
+    database: 0
+    lettuce:
+      pool:
+        max-active: 50
+        max-wait: -1ms
+        max-idle: 20
+        min-idle: 5
+      shutdown-timeout: 100ms
+    timeout: 5000ms
+    connect-timeout: 5000ms
+
+  # 邮件配置
+  mail:
+    host: ${MAIL_HOST}
+    port: ${MAIL_PORT:465}
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+# 生产环境日志配置
+logging:
+  level:
+    com.studyroom: info
+    org.springframework.web: warn
+    org.springframework.security: warn
+    org.springframework.transaction: warn
+  file:
+    name: /var/log/study-room-booking/app.log
+  logback:
+    rollingpolicy:
+      max-history: 30
+      max-file-size: 50MB
+      total-size-cap: 3GB
+      clean-history-on-start: true
+
+# 生产环境关闭Swagger
+knife4j:
+  production: true
+
+# 生产环境特殊配置
+study-room:
+  # 生产环境开启所有验证
+  captcha:
+    enabled: true
+  identity-verify:
+    enabled: true
+  face-recognition:
+    enabled: true
+    simulate: false
+    # 人脸识别服务地址
+    service-url: ${FACE_SERVICE_URL}
+    api-key: ${FACE_API_KEY}
+    api-secret: ${FACE_API_SECRET}
+
+  # 生产环境安全配置
+  security:
+    cors:
+      allowed-origins: ${ALLOWED_ORIGINS:http://localhost:5173,http://localhost:3000}
+      allowed-methods: GET,POST,PUT,DELETE,OPTIONS
+      allowed-headers: "*"
+      allow-credentials: true
+      max-age: 3600
+
+# 生产环境监控配置
+management:
+  server:
+    port: 9000
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+      base-path: /management
+      path-mapping:
+        health: healthcheck
+  endpoint:
+    health:
+      show-details: never
+      probes:
+        enabled: true
