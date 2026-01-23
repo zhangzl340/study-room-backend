@@ -98,27 +98,21 @@ mybatis-plus:
 # Knife4j配置
 knife4j:
   enable: true
+#  production: false
+  api-docs:
+    path:/v3/api-docs
   setting:
-    language: zh-CN
-    enable-swagger-models: true
-    enable-document-manage: true
-    enable-version: true
-    enable-request-cache: true
-    enable-footer: false
-    enable-footer-custom: true
-    footer-custom-content: MIT License | Study Room Booking System
-    enable-home-custom: true
-    home-custom-path: /swagger-ui/index.html
-  production: false
+    language: zh_cn
+#    swagger-model-name:
 
-# SpringDoc配置（Knife4j 4.x基于SpringDoc）
+# SpringDoc配置（Swagger UI）
 springdoc:
   api-docs:
     enabled: true
     path: /v3/api-docs
   swagger-ui:
     enabled: true
-    path: /swagger-ui/index.html
+    path: /swagger-ui
     tags-sorter: alpha
     operations-sorter: alpha
     show-actuator: false
