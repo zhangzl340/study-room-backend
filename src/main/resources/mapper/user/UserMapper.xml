@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.studyroom.modules.admin.mapper.AnnouncementMapper">
-    <!-- 最简单的测试SQL -->
-    <select id="selectTest" resultType="java.lang.Long">
-        SELECT 1
+<mapper namespace="com.studyroom.modules.user.mapper.UserMapper">
+
+    <select id="selectByUsername" resultType="com.studyroom.modules.user.entity.User">
+        SELECT * FROM sys_user
+        WHERE username = #{username}
+          AND deleted = 0
     </select>
+
+    <select id="selectByStudentId" resultType="com.studyroom.modules.user.entity.User">
+        SELECT * FROM sys_user
+        WHERE student_id = #{studentId}
+          AND deleted = 0
+    </select>
+
+    <select id="selectByEmail" resultType="com.studyroom.modules.user.entity.User">
+        SELECT * FROM sys_user
+        WHERE email = #{email}
+          AND deleted = 0
+    </select>
+
+    <select id="selectByPhone" resultType="com.studyroom.modules.user.entity.User">
+        SELECT * FROM sys_user
+        WHERE phone = #{phone}
+          AND deleted = 0
+    </select>
+
 </mapper>

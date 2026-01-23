@@ -36,6 +36,12 @@ public enum ErrorCode {
     PASSWORD_ERROR(10011, "密码错误"),
     OLD_PASSWORD_ERROR(10012, "原密码错误"),
     USER_EXISTS(10013, "用户已存在"),
+    USER_NOT_FOUND(10015, "用户不存在"),
+    USERNAME_ALREADY_EXISTS(10016, "用户名已存在"),
+    STUDENT_ID_ALREADY_EXISTS(10017, "学号已存在"),
+    EMAIL_ALREADY_EXISTS(10018, "邮箱已被使用"),
+    PHONE_ALREADY_EXISTS(10019, "手机号已被使用"),
+    PASSWORD_SAME(10020, "新密码不能与旧密码相同"),
     IDENTITY_NOT_VERIFIED(10014, "用户未实名认证"),
 
     // ================== 业务相关错误码 ==================

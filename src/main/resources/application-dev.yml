@@ -5,7 +5,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3308/study_room_db?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&useSSL=false
     username: root
-    password:
+    password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       # 初始化配置

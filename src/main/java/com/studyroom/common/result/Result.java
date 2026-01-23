@@ -1,5 +1,6 @@
 package com.studyroom.common.result;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.studyroom.common.exception.ErrorCode;
 import lombok.Data;
@@ -118,6 +119,7 @@ public class Result<T> implements Serializable {
     /**
      * 获取数据（如果成功）
      */
+    @JsonIgnore
     public T getDataIfSuccess() {
         if (isSuccess()) {
             return data;
