@@ -1,4 +1,5 @@
 package com.studyroom.modules.auth.service;
 
-public class TokenService {
+public interface TokenService {
+    void logout(String token);
 }
