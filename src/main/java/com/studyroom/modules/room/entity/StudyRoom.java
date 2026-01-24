@@ -47,19 +47,21 @@ public class StudyRoom implements Serializable {
     @TableField("available_seats")
     private Integer availableSeats;
 
-    @TableField("rows")
-    private Integer rows;
+    @TableField("row_count")
+    private Integer rowCount;
 
-    @TableField("cols")
-    private Integer cols;
+    @TableField("col_count")
+    private Integer colCount;
 
-    @TableField("layout_config")
+    @JsonFormat(pattern = "{}")
+    @TableField(value = "layout_config",fill = FieldFill.INSERT)
     private String layoutConfig;
 
     @TableField("open_status")
     private Integer openStatus;
 
-    @TableField("open_time_config")
+    @JsonFormat(pattern = "{}")
+    @TableField(value = "open_time_config",fill = FieldFill.INSERT)
     private String openTimeConfig;
 
     @TableField("advance_reservation_hours")
@@ -71,7 +73,8 @@ public class StudyRoom implements Serializable {
     @TableField("max_reservation_minutes")
     private Integer maxReservationMinutes;
 
-    @TableField("facilities")
+    @JsonFormat(pattern = "{}")
+    @TableField(value = "facilities",fill = FieldFill.INSERT)
     private String facilities;
 
     @TableField("has_power")

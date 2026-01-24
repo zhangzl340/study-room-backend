@@ -58,6 +58,7 @@ public class CustomMetaObjectHandler implements MetaObjectHandler {
             strictInsertFill(metaObject, DELETED_FIELD, Integer.class, 0);
         }
 
+
         // 创建人（需要从上下文中获取，这里暂时不实现）
         // 可以在Controller中设置，或者通过ThreadLocal获取当前用户
     }
