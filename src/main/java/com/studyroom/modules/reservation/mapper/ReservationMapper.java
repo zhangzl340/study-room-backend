@@ -1,4 +1,8 @@
 package com.studyroom.modules.reservation.mapper;
 
-public class ReservationMapper {
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.studyroom.modules.reservation.entity.Reservation;
+import org.apache.ibatis.annotations.Mapper;
+@Mapper
+public interface ReservationMapper extends BaseMapper<Reservation> {
 }
