@@ -24,18 +24,42 @@ public class CheckInRecord implements Serializable {
     @TableField("user_id")
     private Long userId;
 
+    @TableField("room_id")
+    private Long roomId;
+
     @TableField("seat_id")
     private Long seatId;
 
-    @TableField("action_type")
-    private String actionType;
-
-    @TableField("action_time")
+    @TableField("check_in_time")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime actionTime;
+    private LocalDateTime checkInTime;
 
-    @TableField("action_method")
-    private String actionMethod;
+    @TableField("check_out_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime checkOutTime;
+
+    @TableField("leave_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime leaveTime;
+
+    @TableField("return_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime returnTime;
+
+    @TableField("status")
+    private String status;
+
+    @TableField("check_in_method")
+    private String checkInMethod;
+
+    @TableField("actual_duration")
+    private Integer actualDuration;
+
+    @TableField("leave_duration")
+    private Integer leaveDuration;
+
+    @TableField("max_leave_minutes")
+    private Integer maxLeaveMinutes;
 
     @TableField("device_info")
     private String deviceInfo;
@@ -49,17 +73,27 @@ public class CheckInRecord implements Serializable {
     @TableField("remarks")
     private String remarks;
 
+    @TableField("action_type")
+    private String actionType;
+
+    @TableField("action_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime actionTime;
+
+    @TableField("action_method")
+    private String actionMethod;
+
     @TableField(exist = false)
     private CheckInActionEnum actionTypeEnum;
 
     @TableField(exist = false)
-    private CheckInMethodEnum actionMethodEnum;
+    private CheckInMethodEnum checkInMethodEnum;
 
     public CheckInActionEnum getActionTypeEnum() {
         return CheckInActionEnum.getByCode(this.actionType);
     }
 
-    public CheckInMethodEnum getActionMethodEnum() {
-        return CheckInMethodEnum.getByCode(this.actionMethod);
+    public CheckInMethodEnum getCheckInMethodEnum() {
+        return CheckInMethodEnum.getByCode(this.checkInMethod);
     }
 }
