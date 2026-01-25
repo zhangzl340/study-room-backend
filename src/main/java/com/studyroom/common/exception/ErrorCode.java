@@ -43,6 +43,10 @@ public enum ErrorCode {
     PHONE_ALREADY_EXISTS(10019, "手机号已被使用"),
     PASSWORD_SAME(10020, "新密码不能与旧密码相同"),
     IDENTITY_NOT_VERIFIED(10014, "用户未实名认证"),
+    ADMIN_INSERT_ERROR(10015,"创建管理员错误"),
+    USER_INSERT_ERROR(10015,"插入用户错误"),
+    ADMIN_UPDATE_ERROR(10016,"更新管理员错误"),
+
 
     // ================== 业务相关错误码 ==================
     ROOM_NOT_FOUND(20001, "自习室不存在"),

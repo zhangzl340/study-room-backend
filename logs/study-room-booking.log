@@ -1,209 +1,784 @@
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/student/checkin/current
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/api/student/checkin/current
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: eyJhbGciOiJIUzI1NiJ9...
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - Token格式有效
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - Redis中是否存在Token: true
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - Token类型: access
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - Token解析成功 - 用户ID: 5, 用户名: admin, 角色: admin
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - 用户 admin 已认证，设置权限: ROLE_ADMIN
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - 当前认证对象: UsernamePasswordAuthenticationToken [Principal=5, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: true
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.checkin.controller.StudentCheckInController#getCurrentCheckIn(Long)
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.checkin.controller.StudentCheckInController#getCurrentCheckIn(Long)
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.checkin.controller.StudentCheckInController#getCurrentCheckIn(Long)
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.checkin.controller.StudentCheckInController#getCurrentCheckIn(Long)
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.checkin.controller.StudentCheckInController#getCurrentCheckIn(Long)
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.checkin.controller.StudentCheckInController#getCurrentCheckIn(Long)
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.checkin.controller.StudentCheckInController#getCurrentCheckIn(Long)
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.checkin.controller.StudentCheckInController#getCurrentCheckIn(Long)
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/student/checkin/current
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/api/student/checkin/current", parameters={masked}
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.checkin.controller.StudentCheckInController#getCurrentCheckIn(Long)
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG org.springframework.web.method.HandlerMethod - Could not resolve parameter [0] in public com.studyroom.common.result.Result<com.studyroom.modules.checkin.vo.CheckInRecordVO> com.studyroom.modules.checkin.controller.StudentCheckInController.getCurrentCheckIn(java.lang.Long): Missing request attribute 'userId' of type Long
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.studyroom.common.exception.GlobalExceptionHandler#handleException(Exception, HttpServletRequest)
-2026-01-24 18:29:22 [http-nio-8080-exec-6] ERROR c.s.common.exception.GlobalExceptionHandler - 系统异常: GET /api/api/student/checkin/current
-org.springframework.web.bind.ServletRequestBindingException: Missing request attribute 'userId' of type Long
-	at org.springframework.web.servlet.mvc.method.annotation.RequestAttributeMethodArgumentResolver.handleMissingValue(RequestAttributeMethodArgumentResolver.java:60)
-	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleMissingValue(AbstractNamedValueMethodArgumentResolver.java:226)
-	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
-	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
-	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
-	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
-	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
-	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
-	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
-	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at com.studyroom.common.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:87)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
-	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=500, message=服务器内部错误, data=null, timestamp=1769250562135)]
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.ServletRequestBindingException: Missing request attribute 'userId' of type Long]
-2026-01-24 18:29:22 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2026-01-24 18:29:42 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-2d0bd799.eb48b7f1.js
-2026-01-24 18:29:42 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-2d0bd799.eb48b7f1.js
-2026-01-24 18:29:42 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
-2026-01-24 18:29:42 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
-2026-01-24 18:29:42 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
-2026-01-24 18:29:42 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2026-01-24 18:29:42 [http-nio-8080-exec-5] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
-2026-01-24 18:29:42 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2026-01-24 18:29:42 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2026-01-24 18:29:42 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2026-01-24 18:29:42 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2026-01-24 18:29:42 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2026-01-24 18:29:42 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2026-01-24 18:29:42 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-2d0bd799.eb48b7f1.js
-2026-01-24 18:29:42 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-2d0bd799.eb48b7f1.js", parameters={}
-2026-01-24 18:29:42 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2026-01-24 18:29:42 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2026-01-24 18:29:42 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /favicon.ico
-2026-01-24 18:29:42 [http-nio-8080-exec-7] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/favicon.ico
-2026-01-24 18:29:42 [http-nio-8080-exec-7] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
-2026-01-24 18:29:42 [http-nio-8080-exec-7] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
-2026-01-24 18:29:42 [http-nio-8080-exec-7] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
-2026-01-24 18:29:42 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2026-01-24 18:29:42 [http-nio-8080-exec-7] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
-2026-01-24 18:29:42 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-24 18:29:42 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-24 18:29:42 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-24 18:29:42 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-24 18:29:42 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-24 18:29:42 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-24 18:29:42 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-24 18:29:42 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-24 18:29:42 [http-nio-8080-exec-7] WARN  c.s.common.security.JwtAuthenticationEntryPoint - 认证失败: /api/favicon.ico - Full authentication is required to access this resource
-2026-01-24 18:29:50 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /favicon.ico
-2026-01-24 18:29:50 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/favicon.ico
-2026-01-24 18:29:50 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
-2026-01-24 18:29:50 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
-2026-01-24 18:29:50 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
-2026-01-24 18:29:50 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2026-01-24 18:29:50 [http-nio-8080-exec-2] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
-2026-01-24 18:29:50 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-24 18:29:50 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-24 18:29:50 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-24 18:29:50 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-24 18:29:50 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-24 18:29:50 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-24 18:29:50 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-24 18:29:50 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-24 18:29:50 [http-nio-8080-exec-2] WARN  c.s.common.security.JwtAuthenticationEntryPoint - 认证失败: /api/favicon.ico - Full authentication is required to access this resource
+2026-01-25 15:51:40 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-01-25 15:51:40 [main] INFO  com.studyroom.StudyRoomApplication - Starting StudyRoomApplication using Java 17.0.7 with PID 14604 (F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes started by zzl340 in F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend)
+2026-01-25 15:51:40 [main] DEBUG com.studyroom.StudyRoomApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-01-25 15:51:40 [main] INFO  com.studyroom.StudyRoomApplication - The following 1 profile is active: "dev"
+2026-01-25 15:51:41 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-25 15:51:41 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-25 15:51:42 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 0 Redis repository interfaces.
+2026-01-25 15:51:42 [main] ERROR org.apache.catalina.core.AprLifecycleListener - An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2026-01-25 15:51:43 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-01-25 15:51:43 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-25 15:51:43 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-25 15:51:43 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-01-25 15:51:43 [main] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-01-25 15:51:43 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2907 ms
+2026-01-25 15:51:43 [main] INFO  org.redisson.Version - Redisson 3.23.5
+2026-01-25 15:51:44 [redisson-netty-2-5] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2026-01-25 15:51:44 [redisson-netty-2-20] INFO  org.redisson.connection.pool.MasterConnectionPool - 24 connections initialized for localhost/127.0.0.1:6379
+2026-01-25 15:51:44 [main] DEBUG c.s.common.security.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-01-25 15:51:44 [main] DEBUG o.s.web.filter.ServerHttpObservationFilter - Filter 'webMvcObservationFilter' configured for use
+2026-01-25 15:51:44 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@4e1b5532'
+2026-01-25 15:51:44 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\admin\AnnouncementMapper.xml]'
+2026-01-25 15:51:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-25 15:51:44 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\admin\SystemConfigMapper.xml]'
+2026-01-25 15:51:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-25 15:51:44 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\auth\UserMapper.xml]'
+2026-01-25 15:51:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-25 15:51:44 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\checkin\CheckInRecordMapper.xml]'
+2026-01-25 15:51:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-25 15:51:44 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\notification\NotificationMapper.xml]'
+2026-01-25 15:51:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-25 15:51:44 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\reservation\ReservationMapper.xml]'
+2026-01-25 15:51:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-25 15:51:44 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\reservation\ReservationRuleMapper.xml]'
+2026-01-25 15:51:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-25 15:51:44 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\room\RoomMapper.xml]'
+2026-01-25 15:51:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-25 15:51:44 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\room\SeatMapper.xml]'
+2026-01-25 15:51:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-25 15:51:44 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\statistics\StatisticsMapper.xml]'
+2026-01-25 15:51:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-25 15:51:44 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\user\CreditRecordMapper.xml]'
+2026-01-25 15:51:45 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\user\UserMapper.xml]'
+2026-01-25 15:51:45 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-25 15:51:45 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\violation\ViolationRecordMapper.xml]'
+2026-01-25 15:51:45 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 3d1a6d2d-3989-4aea-b525-e771d7795db7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-01-25 15:51:45 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 86 mappings in 'requestMappingHandlerMapping'
+2026-01-25 15:51:47 [main] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui/**, /swagger-ui.html, /swagger-config, /doc.html, /uploads/**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-01-25 15:51:47 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 4 endpoint(s) beneath base path '/actuator'
+2026-01-25 15:51:47 [main] DEBUG com.studyroom.common.config.WebSecurityConfig - Spring Security配置完成
+2026-01-25 15:51:47 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1399ad68, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@41c83af0, org.springframework.security.web.context.SecurityContextHolderFilter@9c40f43, org.springframework.security.web.header.HeaderWriterFilter@40696fc6, org.springframework.web.filter.CorsFilter@47d4468a, org.springframework.security.web.authentication.logout.LogoutFilter@21202507, com.studyroom.common.security.JwtAuthenticationFilter@470f0637, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6329a5b9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4505015b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@60658389, org.springframework.security.web.session.SessionManagementFilter@1ecf784f, org.springframework.security.web.access.ExceptionTranslationFilter@2f3d5cd, org.springframework.security.web.access.intercept.AuthorizationFilter@5570ee6d]
+2026-01-25 15:51:47 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-01-25 15:51:48 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-01-25 15:51:48 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2026-01-25 15:51:48 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-01-25 15:51:48 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2026-01-25 15:51:48 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2026-01-25 15:51:48 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2026-01-25 15:51:48 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2026-01-25 15:51:48 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2026-01-25 15:51:48 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@701bd6e8
+2026-01-25 15:51:48 [main] WARN  c.b.mybatisplus.core.injector.DefaultSqlInjector - class com.studyroom.modules.user.entity.Admin ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2026-01-25 15:51:48 [main] WARN  c.b.mybatisplus.core.injector.DefaultSqlInjector - class com.studyroom.modules.user.entity.Role ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2026-01-25 15:51:48 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-25 15:51:48 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/api'
+2026-01-25 15:51:48 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2026-01-25 15:51:48 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2026-01-25 15:51:48 [main] INFO  com.studyroom.StudyRoomApplication - Started StudyRoomApplication in 9.025 seconds (process running for 9.863)
+2026-01-25 15:51:48 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2026-01-25 15:51:49 [main] INFO  com.studyroom.common.init.AdminUserInitializer - 修复管理员账号角色...
+2026-01-25 15:51:49 [main] INFO  com.studyroom.common.init.AdminUserInitializer - 管理员账号角色修复成功！
+2026-01-25 15:53:13 [http-nio-8080-exec-1] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-25 15:53:13 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-25 15:53:13 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-01-25 15:53:13 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-01-25 15:53:13 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-01-25 15:53:13 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4c1b39a
+2026-01-25 15:53:13 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@28037461
+2026-01-25 15:53:13 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-01-25 15:53:13 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2026-01-25 15:53:13 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /doc.html
+2026-01-25 15:53:13 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/doc.html
+2026-01-25 15:53:13 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:13 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:13 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:13 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:13 [http-nio-8080-exec-1] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:13 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /doc.html
+2026-01-25 15:53:13 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/doc.html", parameters={}
+2026-01-25 15:53:13 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:13 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/css/app.ac23e017.css
+2026-01-25 15:53:13 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/css/app.ac23e017.css
+2026-01-25 15:53:13 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:13 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:13 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:13 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:13 [http-nio-8080-exec-2] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:13 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/css/chunk-vendors.f24a310a.css
+2026-01-25 15:53:13 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/css/app.ac23e017.css
+2026-01-25 15:53:13 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/css/app.ac23e017.css", parameters={}
+2026-01-25 15:53:13 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/css/chunk-vendors.f24a310a.css
+2026-01-25 15:53:13 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:13 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:13 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:13 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:13 [http-nio-8080-exec-3] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:13 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/css/chunk-vendors.f24a310a.css
+2026-01-25 15:53:13 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/css/chunk-vendors.f24a310a.css", parameters={}
+2026-01-25 15:53:13 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-vendors.d51cf6f8.js
+2026-01-25 15:53:13 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/app.51033393.js
+2026-01-25 15:53:13 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/app.51033393.js
+2026-01-25 15:53:13 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:13 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:13 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:13 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:13 [http-nio-8080-exec-4] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:13 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-vendors.d51cf6f8.js
+2026-01-25 15:53:13 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:13 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:13 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:13 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:13 [http-nio-8080-exec-5] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:13 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/app.51033393.js
+2026-01-25 15:53:13 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/app.51033393.js", parameters={}
+2026-01-25 15:53:13 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-vendors.d51cf6f8.js
+2026-01-25 15:53:13 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-vendors.d51cf6f8.js", parameters={}
+2026-01-25 15:53:13 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:13 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:13 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/css/chunk-75464e7e.8fb93ba5.css
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/css/chunk-75464e7e.8fb93ba5.css
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/css/chunk-75464e7e.8fb93ba5.css
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/css/chunk-75464e7e.8fb93ba5.css", parameters={}
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/css/chunk-d7d5f59c.a9ffbfcb.css
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/css/chunk-d7d5f59c.a9ffbfcb.css
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/css/chunk-d7d5f59c.a9ffbfcb.css
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/css/chunk-d7d5f59c.a9ffbfcb.css", parameters={}
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-069eb437.327773c4.js
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-069eb437.327773c4.js
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-0d102d5a.b2bddffc.js
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-0d102d5a.b2bddffc.js
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-069eb437.327773c4.js
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-069eb437.327773c4.js", parameters={}
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-0d102d5a.b2bddffc.js
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-0d102d5a.b2bddffc.js", parameters={}
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:14 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-0fd67716.d57e2c41.js
+2026-01-25 15:53:14 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-0fd67716.d57e2c41.js
+2026-01-25 15:53:14 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:14 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:14 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:14 [http-nio-8080-exec-10] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:14 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:14 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-260d712a.390177fe.js
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-2d0af44e.392afcd6.js
+2026-01-25 15:53:14 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-260d712a.390177fe.js
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-2d0af44e.392afcd6.js
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:14 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:14 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:14 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:14 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:14 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:14 [http-nio-8080-exec-1] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:14 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-0fd67716.d57e2c41.js
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-2d0da532.591ad7fc.js
+2026-01-25 15:53:14 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-2d0da532.591ad7fc.js
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:14 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-260d712a.390177fe.js
+2026-01-25 15:53:14 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-260d712a.390177fe.js", parameters={}
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-0fd67716.d57e2c41.js", parameters={}
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-2d0af44e.392afcd6.js
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-2d0af44e.392afcd6.js", parameters={}
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-2d0bd799.eb48b7f1.js
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-2d0bd799.eb48b7f1.js
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-2d0da532.591ad7fc.js
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-2d0da532.591ad7fc.js", parameters={}
+2026-01-25 15:53:14 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-2d0bd799.eb48b7f1.js
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-2d0bd799.eb48b7f1.js", parameters={}
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:14 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-3b888a65.8737ce4f.js
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-3b888a65.8737ce4f.js
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-3ec4aaa8.a79d19f8.js
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-3ec4aaa8.a79d19f8.js
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-3b888a65.8737ce4f.js
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-589faee0.5bfd1708.js
+2026-01-25 15:53:14 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-3b888a65.8737ce4f.js", parameters={}
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-589faee0.5bfd1708.js
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-3ec4aaa8.a79d19f8.js
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-3ec4aaa8.a79d19f8.js", parameters={}
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-735c675c.5b409314.js
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-735c675c.5b409314.js
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-735c675c.5b409314.js
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-735c675c.5b409314.js", parameters={}
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-589faee0.5bfd1708.js
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-589faee0.5bfd1708.js", parameters={}
+2026-01-25 15:53:14 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:14 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-75464e7e.b130271b.js
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-75464e7e.b130271b.js
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-75464e7e.b130271b.js
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-75464e7e.b130271b.js", parameters={}
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-adb9e944.2c7f24fe.js
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-adb9e944.2c7f24fe.js
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-d7d5f59c.e61130f3.js
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-d7d5f59c.e61130f3.js
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-adb9e944.2c7f24fe.js
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-adb9e944.2c7f24fe.js", parameters={}
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-d7d5f59c.e61130f3.js
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-d7d5f59c.e61130f3.js", parameters={}
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:14 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:14 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /v3/api-docs/swagger-config
+2026-01-25 15:53:14 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /favicon.ico
+2026-01-25 15:53:14 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/v3/api-docs/swagger-config
+2026-01-25 15:53:14 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:14 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:14 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:15 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:15 [http-nio-8080-exec-10] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:15 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/favicon.ico
+2026-01-25 15:53:15 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:15 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:15 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:15 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:15 [http-nio-8080-exec-5] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:15 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:15 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2026-01-25 15:53:15 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2026-01-25 15:53:15 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2026-01-25 15:53:15 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2026-01-25 15:53:15 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /v3/api-docs/swagger-config
+2026-01-25 15:53:15 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:15 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v3/api-docs/swagger-config", parameters={}
+2026-01-25 15:53:15 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2026-01-25 15:53:15 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:15 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:15 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:15 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:15 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:15 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:15 [http-nio-8080-exec-5] WARN  c.s.common.security.JwtAuthenticationEntryPoint - 认证失败: /api/favicon.ico - Full authentication is required to access this resource
+2026-01-25 15:53:15 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json]
+2026-01-25 15:53:15 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{configUrl=/api/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:8080/api/swagger-ui/o (truncated)...]
+2026-01-25 15:53:15 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:15 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /v3/api-docs
+2026-01-25 15:53:15 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/v3/api-docs
+2026-01-25 15:53:15 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:15 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:15 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:15 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:15 [http-nio-8080-exec-6] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:15 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2026-01-25 15:53:15 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2026-01-25 15:53:15 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2026-01-25 15:53:15 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2026-01-25 15:53:15 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /v3/api-docs
+2026-01-25 15:53:15 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v3/api-docs", parameters={}
+2026-01-25 15:53:15 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2026-01-25 15:53:17 [http-nio-8080-exec-6] INFO  org.springdoc.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 1973 ms
+2026-01-25 15:53:17 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json]
+2026-01-25 15:53:17 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 48, 46, 49, 34, 44, 34, 105, 110, 10 (truncated)...]
+2026-01-25 15:53:17 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/css/chunk-d7d5f59c.a9ffbfcb.css
+2026-01-25 15:53:22 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-d7d5f59c.e61130f3.js
+2026-01-25 15:53:22 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-d7d5f59c.e61130f3.js
+2026-01-25 15:53:22 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:22 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:22 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:22 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:22 [http-nio-8080-exec-5] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:22 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-069eb437.327773c4.js
+2026-01-25 15:53:22 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-069eb437.327773c4.js
+2026-01-25 15:53:22 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:22 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:22 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:22 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:22 [http-nio-8080-exec-10] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/css/chunk-d7d5f59c.a9ffbfcb.css
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:22 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-069eb437.327773c4.js
+2026-01-25 15:53:22 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-069eb437.327773c4.js", parameters={}
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/css/chunk-d7d5f59c.a9ffbfcb.css
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/css/chunk-d7d5f59c.a9ffbfcb.css", parameters={}
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-d7d5f59c.e61130f3.js
+2026-01-25 15:53:22 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-d7d5f59c.e61130f3.js", parameters={}
+2026-01-25 15:53:22 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:22 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:22 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:22 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/css/chunk-75464e7e.8fb93ba5.css
+2026-01-25 15:53:22 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-adb9e944.2c7f24fe.js
+2026-01-25 15:53:22 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-75464e7e.b130271b.js
+2026-01-25 15:53:22 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/css/chunk-75464e7e.8fb93ba5.css
+2026-01-25 15:53:22 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:22 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:22 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:22 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-75464e7e.b130271b.js
+2026-01-25 15:53:22 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-adb9e944.2c7f24fe.js
+2026-01-25 15:53:22 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:22 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:22 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:22 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:22 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:22 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:22 [http-nio-8080-exec-8] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:22 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:22 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:22 [http-nio-8080-exec-1] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:22 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:22 [http-nio-8080-exec-6] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:22 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-adb9e944.2c7f24fe.js
+2026-01-25 15:53:22 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-adb9e944.2c7f24fe.js", parameters={}
+2026-01-25 15:53:22 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/css/chunk-75464e7e.8fb93ba5.css
+2026-01-25 15:53:22 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/css/chunk-75464e7e.8fb93ba5.css", parameters={}
+2026-01-25 15:53:22 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:22 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:22 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-75464e7e.b130271b.js
+2026-01-25 15:53:22 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-75464e7e.b130271b.js", parameters={}
+2026-01-25 15:53:22 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:22 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /favicon.ico
+2026-01-25 15:53:22 [http-nio-8080-exec-7] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/favicon.ico
+2026-01-25 15:53:22 [http-nio-8080-exec-7] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:22 [http-nio-8080-exec-7] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:22 [http-nio-8080-exec-7] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:22 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:22 [http-nio-8080-exec-7] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:22 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-7] WARN  c.s.common.security.JwtAuthenticationEntryPoint - 认证失败: /api/favicon.ico - Full authentication is required to access this resource
+2026-01-25 15:53:22 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-2d0af44e.392afcd6.js
+2026-01-25 15:53:22 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-3ec4aaa8.a79d19f8.js
+2026-01-25 15:53:22 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-3b888a65.8737ce4f.js
+2026-01-25 15:53:22 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-3ec4aaa8.a79d19f8.js
+2026-01-25 15:53:22 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:22 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:22 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:22 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:22 [http-nio-8080-exec-3] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:22 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-2d0af44e.392afcd6.js
+2026-01-25 15:53:22 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:22 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:22 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-3b888a65.8737ce4f.js
+2026-01-25 15:53:22 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:22 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:22 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:22 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:22 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:22 [http-nio-8080-exec-2] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:22 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:22 [http-nio-8080-exec-9] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:22 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-2d0af44e.392afcd6.js
+2026-01-25 15:53:22 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-3b888a65.8737ce4f.js
+2026-01-25 15:53:22 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-3ec4aaa8.a79d19f8.js
+2026-01-25 15:53:22 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-3ec4aaa8.a79d19f8.js", parameters={}
+2026-01-25 15:53:22 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-2d0af44e.392afcd6.js", parameters={}
+2026-01-25 15:53:22 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:22 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-3b888a65.8737ce4f.js", parameters={}
+2026-01-25 15:53:22 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:22 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-2d0bd799.eb48b7f1.js
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-2d0bd799.eb48b7f1.js
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-2d0bd799.eb48b7f1.js
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-2d0bd799.eb48b7f1.js", parameters={}
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:22 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:23 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-0fd67716.d57e2c41.js
+2026-01-25 15:53:23 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-0d102d5a.b2bddffc.js
+2026-01-25 15:53:23 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-0fd67716.d57e2c41.js
+2026-01-25 15:53:23 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:23 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:23 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-0d102d5a.b2bddffc.js
+2026-01-25 15:53:23 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:23 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:23 [http-nio-8080-exec-10] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:23 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:23 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:23 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:23 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:23 [http-nio-8080-exec-5] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:23 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-0d102d5a.b2bddffc.js
+2026-01-25 15:53:23 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-0d102d5a.b2bddffc.js", parameters={}
+2026-01-25 15:53:23 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-0fd67716.d57e2c41.js
+2026-01-25 15:53:23 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-589faee0.5bfd1708.js
+2026-01-25 15:53:23 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-589faee0.5bfd1708.js
+2026-01-25 15:53:23 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:23 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:23 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:23 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-0fd67716.d57e2c41.js", parameters={}
+2026-01-25 15:53:23 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:23 [http-nio-8080-exec-8] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:23 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:23 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-589faee0.5bfd1708.js
+2026-01-25 15:53:23 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-589faee0.5bfd1708.js", parameters={}
+2026-01-25 15:53:23 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:23 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:23 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /webjars/js/chunk-735c675c.5b409314.js
+2026-01-25 15:53:23 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/webjars/js/chunk-735c675c.5b409314.js
+2026-01-25 15:53:23 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:23 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:23 [http-nio-8080-exec-6] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:23 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:23 [http-nio-8080-exec-6] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:23 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /webjars/js/chunk-735c675c.5b409314.js
+2026-01-25 15:53:23 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/webjars/js/chunk-735c675c.5b409314.js", parameters={}
+2026-01-25 15:53:23 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-25 15:53:23 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-25 15:53:32 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /favicon.ico
+2026-01-25 15:53:32 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/favicon.ico
+2026-01-25 15:53:32 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:32 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:32 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:32 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:32 [http-nio-8080-exec-9] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:32 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:32 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:32 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:32 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:32 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:32 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:32 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:32 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:32 [http-nio-8080-exec-9] WARN  c.s.common.security.JwtAuthenticationEntryPoint - 认证失败: /api/favicon.ico - Full authentication is required to access this resource
+2026-01-25 15:53:32 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /favicon.ico
+2026-01-25 15:53:32 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/favicon.ico
+2026-01-25 15:53:32 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-25 15:53:32 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-25 15:53:32 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-25 15:53:32 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-25 15:53:32 [http-nio-8080-exec-3] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-25 15:53:32 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:32 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:32 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:32 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:32 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:32 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:32 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:32 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-25 15:53:32 [http-nio-8080-exec-3] WARN  c.s.common.security.JwtAuthenticationEntryPoint - 认证失败: /api/favicon.ico - Full authentication is required to access this resource

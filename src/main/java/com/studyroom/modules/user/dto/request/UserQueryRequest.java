@@ -15,6 +15,9 @@ public class UserQueryRequest {
 
     private String studentId;
 
+    private String email;
+
+    private String phone;
     private String college;
 
     private String major;
