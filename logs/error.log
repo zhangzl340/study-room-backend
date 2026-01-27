@@ -10,3 +10,15 @@
 2026-01-25 15:51:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
 2026-01-25 15:51:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
 2026-01-25 15:51:45 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-25 18:01:07 [main] ERROR org.apache.catalina.core.AprLifecycleListener - An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2026-01-25 18:01:10 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-25 18:01:10 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-25 18:01:10 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-25 18:01:10 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-25 18:01:10 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-25 18:01:10 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-25 18:01:10 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-25 18:01:10 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-25 18:01:10 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-25 18:01:10 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-25 18:01:10 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
