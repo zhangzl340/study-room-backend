@@ -1,7 +1,6 @@
 package com.studyroom.modules.user.service;
 
 import com.studyroom.modules.user.dto.request.*;
-import com.studyroom.modules.user.entity.Admin;
 import com.studyroom.modules.user.entity.User;
 import com.studyroom.modules.user.vo.UserVO;
 

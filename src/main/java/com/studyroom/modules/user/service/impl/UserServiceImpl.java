@@ -7,12 +7,15 @@ import com.studyroom.common.exception.BusinessException;
 import com.studyroom.common.exception.ErrorCode;
 import com.studyroom.common.utils.Md5Utils;
 import com.studyroom.modules.user.dto.request.UpdateProfileRequest;
+import com.studyroom.modules.user.dto.request.UserCreateRequest;
 import com.studyroom.modules.user.dto.request.UserQueryRequest;
+import com.studyroom.modules.user.dto.request.UserUpdateRequest;
 import com.studyroom.modules.user.dto.response.UserInfoResponse;
 import com.studyroom.modules.user.dto.response.UserListResponse;
 import com.studyroom.modules.user.entity.User;
 import com.studyroom.modules.user.mapper.UserMapper;
 import com.studyroom.modules.user.service.UserService;
+import com.studyroom.modules.user.vo.UserVO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -266,6 +269,16 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
                 .build();
     }
 
+    @Override
+    public UserVO getUserDetail(Long id) {
+        User user = userMapper.selectById(id);
+        if (user == null) {
+            throw new BusinessException(ErrorCode.USER_NOT_FOUND);
+        }
+
+        return convertToUserVO(user);
+    }
+
     private UserListResponse convertToUserListResponse(User user) {
         return UserListResponse.builder()
                 .id(user.getId())
@@ -292,5 +305,125 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
                 .lastLoginIp(user.getLastLoginIp())
                 .createTime(user.getCreateTime())
                 .build();
+    }
+
+    private UserVO convertToUserVO(User user) {
+        return UserVO.builder()
+                .id(user.getId())
+                .username(user.getUsername())
+                .realName(user.getRealName())
+                .nickname(user.getNickname())
+                .email(user.getEmail())
+                .phone(user.getPhone())
+                .avatar(user.getAvatar())
+                .gender(user.getGender())
+                .studentId(user.getStudentId())
+                .college(user.getCollege())
+                .major(user.getMajor())
+                .grade(user.getGrade())
+                .className(user.getClassName())
+                .identityStatus(user.getIdentityStatus())
+                .creditScore(user.getCreditScore())
+                .roleType(user.getRoleType())
+                .status(user.getStatus())
+                .lastLoginTime(user.getLastLoginTime())
+                .lastLoginIp(user.getLastLoginIp())
+                .createTime(user.getCreateTime())
+                .build();
+    }
+
+    @Override
+    public UserVO createUser(UserCreateRequest request) {
+        User user = new User();
+        user.setUsername(request.getUsername());
+        user.setPassword(Md5Utils.MD5Encode(request.getPassword()));
+        user.setRealName(request.getName());
+        user.setEmail(request.getEmail());
+        user.setPhone(request.getPhone());
+        user.setCollege(request.getCollege());
+        user.setMajor(request.getMajor());
+        user.setStudentId(request.getStudentId());
+        user.setRoleType(request.getRole());
+        user.setCreditScore(request.getCreditScore() != null ? request.getCreditScore() : 100);
+        user.setStatus(1);
+        user.setCreateTime(LocalDateTime.now());
+        user.setUpdateTime(LocalDateTime.now());
+        
+        save(user);
+        return convertToUserVO(user);
+    }
+
+    @Override
+    public UserVO updateUser(Long id, UserUpdateRequest request) {
+        User user = getById(id);
+        if (user == null) {
+            throw new BusinessException(ErrorCode.USER_NOT_FOUND);
+        }
+        
+        user.setRealName(request.getName());
+        user.setEmail(request.getEmail());
+        user.setPhone(request.getPhone());
+        user.setCollege(request.getCollege());
+        user.setMajor(request.getMajor());
+        user.setStudentId(request.getStudentId());
+        user.setRoleType(request.getRole());
+        if (request.getCreditScore() != null) {
+            user.setCreditScore(request.getCreditScore());
+        }
+        user.setUpdateTime(LocalDateTime.now());
+        
+        updateById(user);
+        return convertToUserVO(user);
+    }
+
+    @Override
+    public void deleteUser(Long id) {
+        removeById(id);
+    }
+
+    @Override
+    public UserVO updateUserStatus(Long id, String status) {
+        User user = getById(id);
+        if (user == null) {
+            throw new BusinessException(ErrorCode.USER_NOT_FOUND);
+        }
+        
+        user.setStatus("ACTIVE".equals(status) ? 1 : 0);
+        user.setUpdateTime(LocalDateTime.now());
+        
+        updateById(user);
+        return convertToUserVO(user);
+    }
+
+    @Override
+    public String resetUserPassword(Long id) {
+        User user = getById(id);
+        if (user == null) {
+            throw new BusinessException(ErrorCode.USER_NOT_FOUND);
+        }
+        
+        String defaultPassword = "123456";
+        user.setPassword(Md5Utils.MD5Encode(defaultPassword));
+        user.setUpdateTime(LocalDateTime.now());
+        
+        updateById(user);
+        return defaultPassword;
+    }
+
+    @Override
+    public UserVO adjustUserCredit(Long id, Integer amount, String reason) {
+        User user = getById(id);
+        if (user == null) {
+            throw new BusinessException(ErrorCode.USER_NOT_FOUND);
+        }
+        
+        int newCreditScore = user.getCreditScore() + amount;
+        newCreditScore = Math.max(0, Math.min(200, newCreditScore));
+        
+        user.setCreditScore(newCreditScore);
+        user.setUpdateTime(LocalDateTime.now());
+        
+        updateById(user);
+        return convertToUserVO(user);
     }
 }

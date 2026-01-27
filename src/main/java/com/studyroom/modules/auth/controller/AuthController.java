@@ -6,9 +6,11 @@ import com.studyroom.modules.auth.dto.request.ChangePasswordRequest;
 import com.studyroom.modules.auth.dto.request.LoginRequest;
 import com.studyroom.modules.auth.dto.request.RefreshTokenRequest;
 import com.studyroom.modules.auth.dto.request.RegisterRequest;
+import com.studyroom.modules.auth.dto.request.UpdateProfileRequest;
 import com.studyroom.modules.auth.dto.request.VerifyIdentityRequest;
 import com.studyroom.modules.auth.dto.response.LoginResponse;
 import com.studyroom.modules.auth.dto.response.RefreshTokenResponse;
+import com.studyroom.modules.auth.dto.response.UserInfoResponse;
 import com.studyroom.modules.auth.dto.response.VerifyIdentityResponse;
 import com.studyroom.modules.auth.service.AuthService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -52,7 +54,7 @@ public class AuthController {
         return Result.success("注册成功");
     }
 
-    @PostMapping("/refresh-token")
+    @PostMapping("/refresh")
     @Operation(summary = "刷新Token")
     public Result<RefreshTokenResponse> refreshToken(@Valid @RequestBody RefreshTokenRequest request) {
         RefreshTokenResponse response = authService.refreshToken(request);
@@ -81,6 +83,43 @@ public class AuthController {
         Long userId = (Long) authentication.getPrincipal();
         VerifyIdentityResponse response = authService.verifyIdentity(userId, request);
         return Result.success(response);
+    }
+
+    @GetMapping("/me")
+    @Operation(summary = "获取当前用户信息")
+    public Result<UserInfoResponse> getCurrentUser(Authentication authentication) {
+        Long userId = (Long) authentication.getPrincipal();
+        UserInfoResponse response = authService.getCurrentUser(userId);
+        return Result.success(response);
+    }
+
+    @PutMapping("/profile")
+    @Operation(summary = "更新用户信息")
+    public Result<UserInfoResponse> updateUserInfo(@Valid @RequestBody UpdateProfileRequest request, Authentication authentication) {
+        Long userId = (Long) authentication.getPrincipal();
+        UserInfoResponse response = authService.updateUserInfo(userId, request);
+        return Result.success(response);
+    }
+
+    @GetMapping("/captcha")
+    @Operation(summary = "获取验证码")
+    public Result<java.util.Map<String, Object>> getCaptcha() {
+        java.util.Map<String, Object> response = authService.getCaptcha();
+        return Result.success(response);
+    }
+
+    @PostMapping("/reset-password/request")
+    @Operation(summary = "重置密码请求")
+    public Result<Void> requestResetPassword(@RequestParam String email) {
+        authService.requestResetPassword(email);
+        return Result.success("重置密码邮件已发送");
+    }
+
+    @PostMapping("/reset-password")
+    @Operation(summary = "重置密码")
+    public Result<Void> resetPassword(@RequestParam String token, @RequestParam String newPassword) {
+        authService.resetPassword(token, newPassword);
+        return Result.success("密码重置成功");
     }
 
     private String getClientIp(HttpServletRequest request) {

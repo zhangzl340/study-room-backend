@@ -213,4 +213,19 @@ public class SeatServiceImpl extends ServiceImpl<SeatMapper, Seat> implements Se
         seat.setCurrentReservationId(reservationId);
         return updateById(seat);
     }
+
+    @Override
+    public Map<String, Object> getSeatLayout(Long roomId) {
+        LambdaQueryWrapper<Seat> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(Seat::getRoomId, roomId);
+        wrapper.eq(Seat::getDeleted, 0);
+        wrapper.orderByAsc(Seat::getRowIndex, Seat::getColIndex);
+        List<Seat> seats = list(wrapper);
+
+        return Map.of(
+                "roomId", roomId,
+                "seats", seats,
+                "totalSeats", seats.size()
+        );
+    }
 }

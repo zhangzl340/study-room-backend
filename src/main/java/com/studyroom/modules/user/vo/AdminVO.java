@@ -1,11 +1,11 @@
-package com.studyroom.modules.auth.dto.response;
+package com.studyroom.modules.user.vo;
 
-import lombok.Builder;
 import lombok.Data;
+
 import java.time.LocalDateTime;
-@Builder
+
 @Data
-public class UserInfoResponse {
+public class AdminVO {
     private Long id;
     private String username;
     private String realName;
@@ -13,14 +13,16 @@ public class UserInfoResponse {
     private String email;
     private String phone;
     private String avatar;
-    private String studentId;
+    private Integer gender;
     private String college;
     private String major;
-    private String grade;
-    private String className;
+    private String studentId;
+    private String role;
+    private Integer status;
     private Integer creditScore;
     private String roleType;
-    private Integer status;
-    private LocalDateTime lastLoginTime;
     private LocalDateTime createTime;
+    private LocalDateTime lastLoginTime;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 }

@@ -250,4 +250,92 @@ public class ReservationServiceImpl extends ServiceImpl<ReservationMapper, Reser
         long durationMinutes = java.time.Duration.between(request.getStartTime(), request.getEndTime()).toMinutes();
         return durationMinutes * 0.1; // 每分钟0.1元
     }
+
+    @Override
+    @Transactional
+    public Reservation updateReservation(Long id, ReservationCreateRequest request, Long userId) {
+        Reservation reservation = getById(id);
+        if (reservation == null) {
+            throw new RuntimeException("预约不存在");
+        }
+
+        if (!reservation.getUserId().equals(userId)) {
+            throw new RuntimeException("无权修改他人预约");
+        }
+
+        // 检查座位可用性
+        AvailabilityResponse availability = checkSeatAvailability(
+                request.getRoomId(), request.getSeatId(), 
+                request.getStartTime(), request.getEndTime()
+        );
+        if (!availability.isAvailable()) {
+            throw new RuntimeException("座位不可用: " + availability.getReason());
+        }
+
+        // 更新预约
+        reservation.setRoomId(request.getRoomId());
+        reservation.setSeatId(request.getSeatId());
+        reservation.setStartTime(request.getStartTime());
+        reservation.setEndTime(request.getEndTime());
+//        reservation.setPurpose(request.getPurpose());
+        reservation.setUpdateTime(LocalDateTime.now());
+        updateById(reservation);
+
+        log.info("更新预约成功: {}", reservation.getId());
+        return reservation;
+    }
+
+    @Override
+    public List<ReservationVO> getUpcomingReservations(Long userId) {
+        LocalDateTime now = LocalDateTime.now();
+        LambdaQueryWrapper<Reservation> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(Reservation::getUserId, userId);
+        wrapper.eq(Reservation::getStatus, "PENDING");
+        wrapper.ge(Reservation::getStartTime, now);
+        wrapper.orderByAsc(Reservation::getStartTime);
+
+        List<Reservation> reservations = list(wrapper);
+        return BeanCopyUtils.copyBeanList(reservations, ReservationVO.class);
+    }
+
+    @Override
+    public Map<String, Object> getTodayReservationStatistics() {
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime today = now.withHour(0).withMinute(0).withSecond(0);
+        LocalDateTime tomorrow = today.plusDays(1);
+
+        // 今日总预约数
+        LambdaQueryWrapper<Reservation> todayWrapper = new LambdaQueryWrapper<>();
+        todayWrapper.ge(Reservation::getCreateTime, today);
+        todayWrapper.lt(Reservation::getCreateTime, tomorrow);
+        long todayCount = count(todayWrapper);
+
+        // 今日已完成预约数
+        LambdaQueryWrapper<Reservation> completedWrapper = new LambdaQueryWrapper<>();
+        completedWrapper.ge(Reservation::getCreateTime, today);
+        completedWrapper.lt(Reservation::getCreateTime, tomorrow);
+        completedWrapper.eq(Reservation::getStatus, "COMPLETED");
+        long completedCount = count(completedWrapper);
+
+        // 今日即将开始的预约数
+        LambdaQueryWrapper<Reservation> upcomingWrapper = new LambdaQueryWrapper<>();
+        upcomingWrapper.eq(Reservation::getStatus, "PENDING");
+        upcomingWrapper.ge(Reservation::getStartTime, now);
+        upcomingWrapper.lt(Reservation::getStartTime, tomorrow);
+        long upcomingCount = count(upcomingWrapper);
+
+        // 今日取消的预约数
+        LambdaQueryWrapper<Reservation> cancelledWrapper = new LambdaQueryWrapper<>();
+        cancelledWrapper.ge(Reservation::getCreateTime, today);
+        cancelledWrapper.lt(Reservation::getCreateTime, tomorrow);
+        cancelledWrapper.eq(Reservation::getStatus, "CANCELLED");
+        long cancelledCount = count(cancelledWrapper);
+
+        return Map.of(
+                "total", todayCount,
+                "completed", completedCount,
+                "upcoming", upcomingCount,
+                "cancelled", cancelledCount
+        );
+    }
 }

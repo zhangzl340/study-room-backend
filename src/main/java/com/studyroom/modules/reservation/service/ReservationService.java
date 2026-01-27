@@ -74,4 +74,19 @@ public interface ReservationService extends IService<Reservation> {
      * 计算预约费用
      */
     double calculateReservationFee(ReservationCreateRequest request);
+
+    /**
+     * 更新预约
+     */
+    Reservation updateReservation(Long id, ReservationCreateRequest request, Long userId);
+
+    /**
+     * 获取即将开始的预约
+     */
+    List<ReservationVO> getUpcomingReservations(Long userId);
+
+    /**
+     * 获取今日预约统计
+     */
+    Map<String, Object> getTodayReservationStatistics();
 }

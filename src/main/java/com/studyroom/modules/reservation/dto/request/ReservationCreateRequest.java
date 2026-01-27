@@ -12,4 +12,5 @@ public class ReservationCreateRequest {
     private LocalDateTime endTime;
     private Integer expectedDuration;
     private String reservationType;
+//    private String purpose;
 }

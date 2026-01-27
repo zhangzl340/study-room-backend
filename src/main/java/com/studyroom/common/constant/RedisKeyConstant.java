@@ -48,6 +48,7 @@ public class RedisKeyConstant {
     public static final String SYSTEM_CONFIG_KEY = "system:config:";            // 系统配置:configKey
     public static final String ANNOUNCEMENT_KEY = "announcement:";              // 公告:announcementId
     public static final String CAPTCHA_KEY = "captcha:";                        // 验证码:captchaId
+    public static final String RESET_PASSWORD_KEY = "reset:password:";          // 重置密码:token
     public static final String RATE_LIMIT_KEY = "rate:limit:";                  // 限流:key
 
     // 锁相关

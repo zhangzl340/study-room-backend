@@ -79,4 +79,25 @@ public class StudentReservationController {
         double fee = reservationService.calculateReservationFee(request);
         return Result.success(fee);
     }
+
+    @PutMapping("/update/{id}")
+    @Operation(summary = "更新预约")
+    public Result<?> updateReservation(@PathVariable Long id, 
+                                      @RequestBody ReservationCreateRequest request, 
+                                      @RequestAttribute("userId") Long userId) {
+        reservationService.updateReservation(id, request, userId);
+        return Result.success("更新预约成功");
+    }
+
+    @GetMapping("/upcoming")
+    @Operation(summary = "获取即将开始的预约")
+    public Result<List<ReservationVO>> getUpcomingReservations(@RequestAttribute("userId") Long userId) {
+        return Result.success(reservationService.getUpcomingReservations(userId));
+    }
+
+    @GetMapping("/statistics")
+    @Operation(summary = "获取预约统计")
+    public Result<?> getReservationStatistics() {
+        return Result.success(reservationService.getTodayReservationStatistics());
+    }
 }

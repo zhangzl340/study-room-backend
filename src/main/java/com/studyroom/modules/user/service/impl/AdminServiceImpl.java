@@ -6,9 +6,7 @@ import com.studyroom.common.exception.BusinessException;
 import com.studyroom.common.exception.ErrorCode;
 import com.studyroom.common.utils.Md5Utils;
 import com.studyroom.modules.user.dto.request.*;
-import com.studyroom.modules.user.entity.Admin;
 import com.studyroom.modules.user.entity.User;
-import com.studyroom.modules.user.mapper.AdminMapper;
 import com.studyroom.modules.user.mapper.UserMapper;
 import com.studyroom.modules.user.service.AdminService;
 import com.studyroom.modules.user.vo.UserVO;
@@ -58,12 +56,9 @@ public class AdminServiceImpl extends ServiceImpl<UserMapper, User> implements A
         User user = new User();
         user.setUsername(request.getUsername());
         user.setPassword(Md5Utils.MD5Encode(request.getPassword()));
-        user.setRealName(request.getRealName());
-        user.setNickname(request.getNickname());
+        user.setRealName(request.getName());
         user.setEmail(request.getEmail());
         user.setPhone(request.getPhone());
-        user.setAvatar(request.getAvatar());
-        user.setGender(request.getGender());
         user.setRoleType("ADMIN");
         user.setStatus(1);
         user.setCreateTime(LocalDateTime.now());
@@ -87,11 +82,8 @@ public class AdminServiceImpl extends ServiceImpl<UserMapper, User> implements A
         }
 
         // 更新用户信息
-        if (StringUtils.isNotBlank(request.getRealName())) {
-            user.setRealName(request.getRealName());
-        }
-        if (StringUtils.isNotBlank(request.getNickname())) {
-            user.setNickname(request.getNickname());
+        if (StringUtils.isNotBlank(request.getName())) {
+            user.setRealName(request.getName());
         }
         if (StringUtils.isNotBlank(request.getEmail())) {
             if (!request.getEmail().equals(user.getEmail())) {
@@ -110,12 +102,6 @@ public class AdminServiceImpl extends ServiceImpl<UserMapper, User> implements A
                 }
                 user.setPhone(request.getPhone());
             }
-        }
-        if (request.getGender() != null) {
-            user.setGender(request.getGender());
-        }
-        if (StringUtils.isNotBlank(request.getAvatar())) {
-            user.setAvatar(request.getAvatar());
         }
 
         user.setUpdateTime(LocalDateTime.now());
@@ -223,19 +209,27 @@ public class AdminServiceImpl extends ServiceImpl<UserMapper, User> implements A
     }
 
     private UserVO convertToUserVO(User user) {
-        UserVO userVO = new UserVO();
-        userVO.setId(user.getId());
-        userVO.setUsername(user.getUsername());
-        userVO.setRealName(user.getRealName());
-        userVO.setNickname(user.getNickname());
-        userVO.setEmail(user.getEmail());
-        userVO.setPhone(user.getPhone());
-        userVO.setAvatar(user.getAvatar());
-        userVO.setGender(user.getGender());
-        userVO.setStatus(user.getStatus());
-        userVO.setRoleType(user.getRoleType());
-        userVO.setCreateTime(user.getCreateTime());
-        userVO.setLastLoginTime(user.getLastLoginTime());
-        return userVO;
+        return UserVO.builder()
+                .id(user.getId())
+                .username(user.getUsername())
+                .realName(user.getRealName())
+                .nickname(user.getNickname())
+                .email(user.getEmail())
+                .phone(user.getPhone())
+                .avatar(user.getAvatar())
+                .gender(user.getGender())
+                .studentId(user.getStudentId())
+                .college(user.getCollege())
+                .major(user.getMajor())
+                .grade(user.getGrade())
+                .className(user.getClassName())
+                .identityStatus(user.getIdentityStatus())
+                .creditScore(user.getCreditScore())
+                .roleType(user.getRoleType())
+                .status(user.getStatus())
+                .lastLoginTime(user.getLastLoginTime())
+                .lastLoginIp(user.getLastLoginIp())
+                .createTime(user.getCreateTime())
+                .build();
     }
 }

@@ -11,9 +11,11 @@ import com.studyroom.modules.auth.dto.request.LoginRequest;
 import com.studyroom.modules.auth.dto.request.RefreshTokenRequest;
 import com.studyroom.modules.auth.dto.request.RegisterRequest;
 import com.studyroom.modules.auth.dto.request.VerifyIdentityRequest;
+import com.studyroom.modules.auth.dto.request.UpdateProfileRequest;
 import com.studyroom.modules.auth.dto.response.LoginResponse;
 import com.studyroom.modules.auth.dto.response.RefreshTokenResponse;
 import com.studyroom.modules.auth.dto.response.VerifyIdentityResponse;
+import com.studyroom.modules.auth.dto.response.UserInfoResponse;
 import com.studyroom.modules.auth.service.AuthService;
 import com.studyroom.modules.user.entity.User;
 import com.studyroom.modules.user.service.UserService;
@@ -23,6 +25,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.ByteArrayOutputStream;
+import java.util.Base64;
+import java.util.Map;
+import java.util.HashMap;
+import cn.hutool.captcha.CaptchaUtil;
+import cn.hutool.captcha.LineCaptcha;
 import java.time.LocalDateTime;
 
 @Slf4j
@@ -234,5 +242,207 @@ public class AuthServiceImpl implements AuthService {
             return idCard;
         }
         return idCard.substring(0, 6) + "********" + idCard.substring(14);
+    }
+
+    @Override
+    public UserInfoResponse getCurrentUser(Long userId) {
+        User user = userService.getById(userId);
+        if (user == null) {
+            throw new BusinessException(ErrorCode.USER_NOT_FOUND);
+        }
+
+        return UserInfoResponse.builder()
+                .id(user.getId())
+                .username(user.getUsername())
+                .realName(user.getRealName())
+                .nickname(user.getNickname())
+                .email(user.getEmail())
+                .phone(user.getPhone())
+                .avatar(user.getAvatar())
+                .studentId(user.getStudentId())
+                .college(user.getCollege())
+                .major(user.getMajor())
+                .grade(user.getGrade())
+                .className(user.getClassName())
+                .creditScore(user.getCreditScore())
+                .roleType(user.getRoleType())
+                .status(user.getStatus())
+                .lastLoginTime(user.getLastLoginTime())
+                .createTime(user.getCreateTime())
+                .build();
+    }
+
+    @Override
+    public UserInfoResponse updateUserInfo(Long userId, UpdateProfileRequest request) {
+        User user = userService.getById(userId);
+        if (user == null) {
+            throw new BusinessException(ErrorCode.USER_NOT_FOUND);
+        }
+
+        if (request.getEmail() != null && !request.getEmail().equals(user.getEmail())) {
+            if (userService.existsByEmail(request.getEmail())) {
+                throw new BusinessException(ErrorCode.EMAIL_ALREADY_EXISTS);
+            }
+            user.setEmail(request.getEmail());
+        }
+
+        if (request.getPhone() != null && !request.getPhone().equals(user.getPhone())) {
+            if (userService.existsByPhone(request.getPhone())) {
+                throw new BusinessException(ErrorCode.PHONE_ALREADY_EXISTS);
+            }
+            user.setPhone(request.getPhone());
+        }
+
+        if (request.getNickname() != null) {
+            user.setNickname(request.getNickname());
+        }
+
+        if (request.getAvatar() != null) {
+            user.setAvatar(request.getAvatar());
+        }
+
+        if (request.getCollege() != null) {
+            user.setCollege(request.getCollege());
+        }
+
+        if (request.getMajor() != null) {
+            user.setMajor(request.getMajor());
+        }
+
+        if (request.getGrade() != null) {
+            user.setGrade(request.getGrade());
+        }
+
+        if (request.getClassName() != null) {
+            user.setClassName(request.getClassName());
+        }
+
+        user.setUpdateTime(LocalDateTime.now());
+        userService.updateById(user);
+
+        return getCurrentUser(userId);
+    }
+
+    @Override
+    public Map<String, Object> getCaptcha() {
+        try {
+            LineCaptcha lineCaptcha = CaptchaUtil.createLineCaptcha(150, 50, 6, 20);
+            // 生成6位随机验证码
+            String captchaCode = lineCaptcha.getCode();
+            
+            // 生成验证码key
+            String captchaKey = "captcha:" + java.util.UUID.randomUUID().toString();
+            
+            // 将验证码存储到Redis，设置5分钟过期
+            redisUtils.set(RedisKeyConstant.CAPTCHA_KEY + captchaKey, captchaCode , 300);
+
+            // 将验证码图片转换为base64
+            String base64Image;
+            try (ByteArrayOutputStream outputStream = new ByteArrayOutputStream()) {
+                lineCaptcha.write(outputStream); // 写入图片流
+                byte[] imageBytes = outputStream.toByteArray();
+                // 拼接Base64前缀，前端可直接作为img的src属性
+                base64Image = "data:image/png;base64," + Base64.getEncoder().encodeToString(imageBytes);
+            } // 自动关闭outputStream
+            
+            Map<String, Object> result = new HashMap<>();
+            result.put("captchaKey", captchaKey);
+            result.put("captchaImage", base64Image);
+            
+            log.info("生成验证码: {}，key: {}", captchaCode, captchaKey);
+            return result;
+        } catch (Exception e) {
+            log.error("生成验证码失败", e);
+            throw new BusinessException(ErrorCode.SYSTEM_ERROR, "生成验证码失败");
+        }
+    }
+
+    @Override
+    public void requestResetPassword(String email) {
+        try {
+            // 验证邮箱是否存在
+            User user = userService.getUserByEmail(email);
+            if (user == null) {
+                throw new BusinessException(ErrorCode.USER_NOT_FOUND, "该邮箱未注册");
+            }
+            
+            // 生成重置密码token
+            String resetToken = java.util.UUID.randomUUID().toString();
+            
+            // 将token存储到Redis，设置30分钟过期
+            String tokenKey = RedisKeyConstant.RESET_PASSWORD_KEY + resetToken;
+            redisUtils.set(tokenKey, user.getId().toString(), 1800);
+            
+            // 构建重置密码链接
+            String resetUrl = "http://localhost:3000/reset-password?token=" + resetToken;
+            
+            // 这里应该发送真实的重置密码邮件
+            // 暂时只记录日志
+            log.info("发送重置密码邮件到: {}", email);
+            log.info("重置密码链接: {}", resetUrl);
+            log.info("重置密码token: {}", resetToken);
+            
+            // TODO: 集成邮件发送服务，发送包含重置密码链接的邮件
+            // emailService.sendResetPasswordEmail(user.getEmail(), user.getRealName(), resetUrl);
+            
+        } catch (BusinessException e) {
+            throw e;
+        } catch (Exception e) {
+            log.error("请求重置密码失败", e);
+            throw new BusinessException(ErrorCode.SYSTEM_ERROR, "请求重置密码失败");
+        }
+    }
+
+    @Override
+    public void resetPassword(String token, String newPassword) {
+        try {
+            // 验证token有效性
+            String tokenKey = RedisKeyConstant.RESET_PASSWORD_KEY + token;
+            Object userIdObj = redisUtils.get(tokenKey);
+            
+            if (userIdObj == null) {
+                throw new BusinessException(ErrorCode.TOKEN_INVALID, "重置密码链接已过期或无效");
+            }
+            
+            Long userId = Long.valueOf(userIdObj.toString());
+            
+            // 验证用户是否存在
+            User user = userService.getById(userId);
+            if (user == null) {
+                throw new BusinessException(ErrorCode.USER_NOT_FOUND);
+            }
+            
+            // 验证新密码复杂度
+            if (newPassword.length() < 6 || newPassword.length() > 20) {
+                throw new BusinessException(ErrorCode.BAD_REQUEST, "密码长度必须在6-20之间");
+            }
+            
+            // 加密新密码
+            String encryptedPassword = Md5Utils.MD5Encode(newPassword);
+            
+            // 更新用户密码
+            user.setPassword(encryptedPassword);
+            user.setUpdateTime(LocalDateTime.now());
+            userService.updateById(user);
+            
+            // 删除Redis中的token
+            redisUtils.delete(tokenKey);
+            
+            // 清理用户的旧token，确保用户需要重新登录
+            String userTokenKey = RedisKeyConstant.USER_TOKEN_KEY + "user:" + user.getId();
+            Object oldTokenKey = redisUtils.get(userTokenKey);
+            if (oldTokenKey != null) {
+                redisUtils.delete(oldTokenKey.toString());
+                redisUtils.delete(userTokenKey);
+                log.info("清理用户旧token: {}", user.getUsername());
+            }
+            
+            log.info("用户重置密码成功: {}", user.getUsername());
+        } catch (BusinessException e) {
+            throw e;
+        } catch (Exception e) {
+            log.error("重置密码失败", e);
+            throw new BusinessException(ErrorCode.SYSTEM_ERROR, "重置密码失败");
+        }
     }
 }

@@ -1,24 +1,459 @@
-2026-01-25 15:51:42 [main] ERROR org.apache.catalina.core.AprLifecycleListener - An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
-2026-01-25 15:51:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
-2026-01-25 15:51:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
-2026-01-25 15:51:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
-2026-01-25 15:51:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
-2026-01-25 15:51:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
-2026-01-25 15:51:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
-2026-01-25 15:51:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
-2026-01-25 15:51:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
-2026-01-25 15:51:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
-2026-01-25 15:51:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
-2026-01-25 15:51:45 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
-2026-01-25 18:01:07 [main] ERROR org.apache.catalina.core.AprLifecycleListener - An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
-2026-01-25 18:01:10 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
-2026-01-25 18:01:10 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
-2026-01-25 18:01:10 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
-2026-01-25 18:01:10 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
-2026-01-25 18:01:10 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
-2026-01-25 18:01:10 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
-2026-01-25 18:01:10 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
-2026-01-25 18:01:10 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
-2026-01-25 18:01:10 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
-2026-01-25 18:01:10 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
-2026-01-25 18:01:10 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+"C:\Program Files\Java\jdk-17\bin\java.exe" -Dmaven.multiModuleProjectDirectory=F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend -Djansi.passthrough=true "-Dmaven.home=D:\IntelliJ IDEA 2023.1.1\plugins\maven\lib\maven3" "-Dclassworlds.conf=D:\IntelliJ IDEA 2023.1.1\plugins\maven\lib\maven3\bin\m2.conf" "-Dmaven.ext.class.path=D:\IntelliJ IDEA 2023.1.1\plugins\maven\lib\maven-event-listener.jar" "-javaagent:D:\IntelliJ IDEA 2023.1.1\lib\idea_rt.jar=63404:D:\IntelliJ IDEA 2023.1.1\bin" -Dfile.encoding=UTF-8 -classpath "D:\IntelliJ IDEA 2023.1.1\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;D:\IntelliJ IDEA 2023.1.1\plugins\maven\lib\maven3\boot\plexus-classworlds.license" org.codehaus.classworlds.Launcher -Didea.version=2023.1.1 clean spring-boot:run -Dspring-boot.run.profiles=dev
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------< com.studyroom:study-room-booking >------------------
+[INFO] Building study-room-booking 1.0.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33
+[INFO]
+[INFO] --- maven-clean-plugin:3.2.0:clean (default-clean) @ study-room-booking ---
+[INFO] Deleting F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target
+[INFO]
+[INFO] >>> spring-boot-maven-plugin:3.1.5:run (default-cli) > test-compile @ study-room-booking >>>
+[INFO]
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ study-room-booking ---
+[INFO] Copying 22 resources from src\main\resources to target\classes
+[INFO] Copying 5 resources from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\java to target\classes
+[INFO]
+[INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ study-room-booking ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 257 source files with javac [debug release 17] to target\classes
+[INFO] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/common/utils/RedisUtils.java: F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\src\main\java\com\studyroom\common\utils\RedisUtils.java使用或覆盖了已过时的 API。
+[INFO] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/common/utils/RedisUtils.java: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+[INFO] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/common/enums/BaseEnumConverterFactory.java: 某些输入文件使用了未经检查或不安全的操作。
+[INFO] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/common/enums/BaseEnumConverterFactory.java: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING :
+[INFO] -------------------------------------------------------------
+[WARNING] 以下选项未被任何处理程序识别: '[mapstruct.verbose, mapstruct.defaultComponentModel, mapstruct.suppressGeneratorTimestamp]'
+[INFO] 1 warning
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[250,32] 找不到符号
+  符号:   方法 builder()
+  位置: 类 com.studyroom.modules.auth.dto.response.UserInfoResponse
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[278,20] 找不到符号
+  符号:   方法 getEmail()
+  位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[278,51] 找不到符号
+  符号:   方法 getEmail()
+  位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[279,50] 找不到符号
+  符号:   方法 getEmail()
+  位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[282,34] 找不到符号
+  符号:   方法 getEmail()
+  位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[285,20] 找不到符号
+  符号:   方法 getPhone()
+  位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[285,51] 找不到符号
+  符号:   方法 getPhone()
+  位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[286,50] 找不到符号
+  符号:   方法 getPhone()
+  位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[289,34] 找不到符号
+  符号:   方法 getPhone()
+  位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[292,20] 找不到符号
+  符号:   方法 getNickname()
+  位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[293,37] 找不到符号
+  符号:   方法 getNickname()
+  位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[296,20] 找不到符号
+  符号:   方法 getAvatar()
+  位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[297,35] 找不到符号
+  符号:   方法 getAvatar()
+  位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[300,20] 找不到符号
+  符号:   方法 getCollege()
+  位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[301,36] 找不到符号
+  符号:   方法 getCollege()
+  位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[304,20] 找不到符号
+  符号:   方法 getMajor()
+  位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[305,34] 找不到符号
+  符号:   方法 getMajor()
+  位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[308,20] 找不到符号
+  符号:   方法 getGrade()
+  位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[309,34] 找不到符号
+  符号:   方法 getGrade()
+  位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[312,20] 找不到符号
+  符号:   方法 getClassName()
+  位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[313,38] 找不到符号
+  符号:   方法 getClassName()
+  位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/reservation/service/impl/ReservationServiceImpl.java:[280,39] 找不到符号
+  符号:   方法 getPurpose()
+  位置: 类型为com.studyroom.modules.reservation.dto.request.ReservationCreateRequest的变量 request
+[INFO] 22 errors
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  31.912 s
+[INFO] Finished at: 2026-01-27T18:19:14+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project study-room-booking: Compilation failure: Compilation failure:
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[250,32] 找不到符号
+[ERROR]   符号:   方法 builder()
+[ERROR]   位置: 类 com.studyroom.modules.auth.dto.response.UserInfoResponse
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[278,20] 找不到符号
+[ERROR]   符号:   方法 getEmail()
+[ERROR]   位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[278,51] 找不到符号
+[ERROR]   符号:   方法 getEmail()
+[ERROR]   位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[279,50] 找不到符号
+[ERROR]   符号:   方法 getEmail()
+[ERROR]   位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[282,34] 找不到符号
+[ERROR]   符号:   方法 getEmail()
+[ERROR]   位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[285,20] 找不到符号
+[ERROR]   符号:   方法 getPhone()
+[ERROR]   位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[285,51] 找不到符号
+[ERROR]   符号:   方法 getPhone()
+[ERROR]   位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[286,50] 找不到符号
+[ERROR]   符号:   方法 getPhone()
+[ERROR]   位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[289,34] 找不到符号
+[ERROR]   符号:   方法 getPhone()
+[ERROR]   位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[292,20] 找不到符号
+[ERROR]   符号:   方法 getNickname()
+[ERROR]   位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[293,37] 找不到符号
+[ERROR]   符号:   方法 getNickname()
+[ERROR]   位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[296,20] 找不到符号
+[ERROR]   符号:   方法 getAvatar()
+[ERROR]   位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[297,35] 找不到符号
+[ERROR]   符号:   方法 getAvatar()
+[ERROR]   位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[300,20] 找不到符号
+[ERROR]   符号:   方法 getCollege()
+[ERROR]   位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[301,36] 找不到符号
+[ERROR]   符号:   方法 getCollege()
+[ERROR]   位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[304,20] 找不到符号
+[ERROR]   符号:   方法 getMajor()
+[ERROR]   位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[305,34] 找不到符号
+[ERROR]   符号:   方法 getMajor()
+[ERROR]   位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[308,20] 找不到符号
+[ERROR]   符号:   方法 getGrade()
+[ERROR]   位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[309,34] 找不到符号
+[ERROR]   符号:   方法 getGrade()
+[ERROR]   位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[312,20] 找不到符号
+[ERROR]   符号:   方法 getClassName()
+[ERROR]   位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/auth/service/impl/AuthServiceImpl.java:[313,38] 找不到符号
+[ERROR]   符号:   方法 getClassName()
+[ERROR]   位置: 类型为com.studyroom.modules.auth.dto.request.UpdateProfileRequest的变量 request
+[ERROR] /F:/林正旭毕业设计/study-room-booking-backend/study-room-booking-backend/src/main/java/com/studyroom/modules/reservation/service/impl/ReservationServiceImpl.java:[280,39] 找不到符号
+[ERROR]   符号:   方法 getPurpose()
+[ERROR]   位置: 类型为com.studyroom.modules.reservation.dto.request.ReservationCreateRequest的变量 request
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Process finished with exit code 1
+2026-01-27 18:25:42 [main] ERROR org.apache.catalina.core.AprLifecycleListener - An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2026-01-27 18:25:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-27 18:25:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-27 18:25:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-27 18:25:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-27 18:25:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-27 18:25:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-27 18:25:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-27 18:25:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-27 18:25:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-27 18:25:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-27 18:25:44 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-27 19:27:57 [main] ERROR org.apache.catalina.core.AprLifecycleListener - An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2026-01-27 19:27:59 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-27 19:27:59 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-27 19:27:59 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-27 19:27:59 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-27 19:27:59 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-27 19:27:59 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-27 19:27:59 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-27 19:27:59 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-27 19:27:59 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-27 19:27:59 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-27 19:27:59 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0x725453a0, L:/127.0.0.1:51300 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0x1e59203c, L:/127.0.0.1:51301 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0x020d9ce4, L:/127.0.0.1:51302 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0x2a7517c7, L:/127.0.0.1:51303 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0x435e08bf, L:/127.0.0.1:51304 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0x20d4d5f6, L:/127.0.0.1:51305 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0x7a87abac, L:/127.0.0.1:51306 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0xb795902d, L:/127.0.0.1:51307 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0x85ae2b27, L:/127.0.0.1:51308 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0x2947d4a3, L:/127.0.0.1:51309 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0x5e11fd1d, L:/127.0.0.1:51310 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0x4703bc64, L:/127.0.0.1:51311 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0xaf575fae, L:/127.0.0.1:51312 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0x5137fec1, L:/127.0.0.1:51313 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0x88c8ccb1, L:/127.0.0.1:51314 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0x4d07d132, L:/127.0.0.1:51315 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0xa100ed37, L:/127.0.0.1:51316 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0x615c72c7, L:/127.0.0.1:51317 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0x038fd1ad, L:/127.0.0.1:51318 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0x45e2982c, L:/127.0.0.1:51319 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0x54448350, L:/127.0.0.1:51320 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0x5fa68bcf, L:/127.0.0.1:51321 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0xb65c0735, L:/127.0.0.1:51322 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0x3174b967, L:/127.0.0.1:51323 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-01-27 19:30:59 [redisson-timer-4-1] ERROR org.redisson.client.handler.PingConnectionHandler - Unable to send PING command over channel: [id: 0x700d71d4, L:/127.0.0.1:51324 - R:localhost/127.0.0.1:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://localhost:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)

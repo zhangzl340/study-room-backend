@@ -85,4 +85,9 @@ public interface SeatService extends IService<Seat> {
      * 占用座位
      */
     boolean occupySeat(Long seatId, Long userId, Long reservationId);
+
+    /**
+     * 获取座位布局
+     */
+    Map<String, Object> getSeatLayout(Long roomId);
 }

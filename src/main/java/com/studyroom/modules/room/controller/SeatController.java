@@ -89,6 +89,12 @@ public class SeatController {
         return Result.success("更新座位布局成功");
     }
 
+    @GetMapping("/layout/{roomId}")
+    @Operation(summary = "获取座位布局")
+    public Result<?> getSeatLayout(@PathVariable Long roomId) {
+        return Result.success(seatService.getSeatLayout(roomId));
+    }
+
     @GetMapping("/statistics/{roomId}")
     @Operation(summary = "获取自习室内座位统计信息")
     public Result<Map<String, Object>> getSeatStatistics(@PathVariable Long roomId) {

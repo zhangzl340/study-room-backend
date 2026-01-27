@@ -22,4 +22,14 @@ public interface AuthService {
     void changePassword(Long userId, ChangePasswordRequest request);
 
     VerifyIdentityResponse verifyIdentity(Long userId, VerifyIdentityRequest request);
+
+    com.studyroom.modules.auth.dto.response.UserInfoResponse getCurrentUser(Long userId);
+
+    com.studyroom.modules.auth.dto.response.UserInfoResponse updateUserInfo(Long userId, com.studyroom.modules.auth.dto.request.UpdateProfileRequest request);
+
+    java.util.Map<String, Object> getCaptcha();
+
+    void requestResetPassword(String email);
+
+    void resetPassword(String token, String newPassword);
 }
