@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/admin/violation")
+@RequestMapping("/admin/violation")
 @RequiredArgsConstructor
 @Tag(name = "违规管理接口(管理员可用)", description = "违规记录处理管理")
 public class ViolationController {

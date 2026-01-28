@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/admin/reservation")
+@RequestMapping("/admin/reservation")
 @RequiredArgsConstructor
 @Tag(name = "预约管理接口(管理员可用)", description = "预约列表查询状态管理")
 public class ReservationController {

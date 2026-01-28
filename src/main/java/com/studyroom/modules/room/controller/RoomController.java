@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/room")
+@RequestMapping("/room")
 @RequiredArgsConstructor
 @Tag(name = "自习室接口", description = "可以查看自习室信息")
 public class RoomController {

@@ -1,68 +1,425 @@
-2026-01-27 19:39:02 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/auth/captcha?_t=1769513942778
-2026-01-27 19:39:02 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/api/auth/captcha
-2026-01-27 19:39:02 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
-2026-01-27 19:39:02 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
-2026-01-27 19:39:02 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
-2026-01-27 19:39:02 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2026-01-27 19:39:02 [http-nio-8080-exec-9] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
-2026-01-27 19:39:02 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-27 19:39:02 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-27 19:39:02 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-27 19:39:02 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-27 19:39:02 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-27 19:39:02 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-27 19:39:02 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-27 19:39:02 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2026-01-27 19:39:02 [http-nio-8080-exec-9] WARN  c.s.common.security.JwtAuthenticationEntryPoint - 认证失败: /api/api/auth/captcha - Full authentication is required to access this resource
-2026-01-27 19:44:45 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /auth/captcha?_t=1769514285794
-2026-01-27 19:44:45 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/auth/captcha
-2026-01-27 19:44:45 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
-2026-01-27 19:44:45 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
-2026-01-27 19:44:45 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
-2026-01-27 19:44:45 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2026-01-27 19:44:45 [http-nio-8080-exec-8] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
-2026-01-27 19:44:45 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#getCaptcha()
-2026-01-27 19:44:45 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /auth/captcha?_t=1769514285794
-2026-01-27 19:44:45 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/auth/captcha?_t=1769514285794", parameters={masked}
-2026-01-27 19:44:45 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#getCaptcha()
-2026-01-27 19:44:45 [http-nio-8080-exec-8] INFO  c.s.modules.auth.service.impl.AuthServiceImpl - 生成验证码: iqw0wn，key: captcha:8f4f2fa6-8d94-4ad5-9bc0-123b311b310d
-2026-01-27 19:44:45 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2026-01-27 19:44:45 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=200, message=操作成功, data={captchaKey=captcha:8f4f2fa6-8d94-4ad5-9bc0-123b311b310d, captch (truncated)...]
-2026-01-27 19:44:45 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2026-01-27 19:44:45 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /auth/captcha?_t=1769514285827
-2026-01-27 19:44:45 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/auth/captcha
-2026-01-27 19:44:45 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
-2026-01-27 19:44:45 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
-2026-01-27 19:44:45 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
-2026-01-27 19:44:45 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2026-01-27 19:44:45 [http-nio-8080-exec-2] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
-2026-01-27 19:44:45 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#getCaptcha()
-2026-01-27 19:44:45 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /auth/captcha?_t=1769514285827
-2026-01-27 19:44:45 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/auth/captcha?_t=1769514285827", parameters={masked}
-2026-01-27 19:44:45 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#getCaptcha()
-2026-01-27 19:44:45 [http-nio-8080-exec-2] INFO  c.s.modules.auth.service.impl.AuthServiceImpl - 生成验证码: AgdE9I，key: captcha:8f087859-a30f-4501-97bb-2ea7dbca1c34
-2026-01-27 19:44:45 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2026-01-27 19:44:45 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=200, message=操作成功, data={captchaKey=captcha:8f087859-a30f-4501-97bb-2ea7dbca1c34, captch (truncated)...]
-2026-01-27 19:44:45 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2026-01-27 19:44:56 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /auth/captcha?_t=1769514296306
-2026-01-27 19:44:56 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/auth/captcha
-2026-01-27 19:44:56 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
-2026-01-27 19:44:56 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
-2026-01-27 19:44:56 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
-2026-01-27 19:44:56 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2026-01-27 19:44:56 [http-nio-8080-exec-10] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
-2026-01-27 19:44:56 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#getCaptcha()
-2026-01-27 19:44:56 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /auth/captcha?_t=1769514296306
-2026-01-27 19:44:56 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/auth/captcha?_t=1769514296306", parameters={masked}
-2026-01-27 19:44:56 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#getCaptcha()
-2026-01-27 19:44:56 [http-nio-8080-exec-10] INFO  c.s.modules.auth.service.impl.AuthServiceImpl - 生成验证码: Ppgf3t，key: captcha:a348b113-292f-41c8-b6da-354e7c132ce6
-2026-01-27 19:44:56 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2026-01-27 19:44:56 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=200, message=操作成功, data={captchaKey=captcha:a348b113-292f-41c8-b6da-354e7c132ce6, captch (truncated)...]
-2026-01-27 19:44:56 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-2026-01-27 19:46:07 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2026-01-27 19:46:07 [SpringApplicationShutdownHook] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
-2026-01-27 19:46:07 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2026-01-27 19:46:07 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2026-01-27 19:46:07 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2026-01-27 19:46:07 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
-2026-01-27 19:46:07 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2026-01-28 18:46:28 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Securing POST /auth/login
+2026-01-28 18:46:28 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/auth/login
+2026-01-28 18:46:28 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-28 18:46:28 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-28 18:46:28 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-28 18:46:28 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-28 18:46:28 [http-nio-8080-exec-3] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-28 18:46:28 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#login(LoginRequest, HttpServletRequest)
+2026-01-28 18:46:28 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Secured POST /auth/login
+2026-01-28 18:46:28 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/auth/login", parameters={}
+2026-01-28 18:46:28 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#login(LoginRequest, HttpServletRequest)
+2026-01-28 18:46:28 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [LoginRequest(username=12313, password=213124, captchaCode=c1pe5l, captchaKey=captcha:81fd8cf0-9839-4 (truncated)...]
+2026-01-28 18:46:28 [http-nio-8080-exec-3] ERROR c.s.modules.auth.service.impl.AuthServiceImpl - Loginrequest = 
+2026-01-28 18:46:28 [http-nio-8080-exec-3] ERROR c.s.modules.auth.service.impl.CaptchaServiceImpl - captchaKey is captcha:81fd8cf0-9839-4b6b-aa44-03bcc0e9cf75
+2026-01-28 18:46:28 [http-nio-8080-exec-3] ERROR c.s.modules.auth.service.impl.CaptchaServiceImpl - captchaKey is captcha:captcha:81fd8cf0-9839-4b6b-aa44-03bcc0e9cf75
+2026-01-28 18:46:28 [http-nio-8080-exec-3] ERROR c.s.modules.auth.service.impl.CaptchaServiceImpl - captchaCode is c1pe5l
+2026-01-28 18:46:28 [http-nio-8080-exec-3] ERROR c.studyroom.modules.auth.controller.AuthController - 登录业务异常: 缓存服务异常
+2026-01-28 18:46:28 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-01-28 18:46:28 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=30003, message=缓存服务异常, data=null, timestamp=1769597188183)]
+2026-01-28 18:46:28 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-28 18:48:06 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2026-01-28 18:48:36 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-01-28 18:48:36 [main] INFO  com.studyroom.StudyRoomApplication - Starting StudyRoomApplication using Java 17.0.7 with PID 28132 (F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes started by zzl340 in F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend)
+2026-01-28 18:48:36 [main] DEBUG com.studyroom.StudyRoomApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-01-28 18:48:36 [main] INFO  com.studyroom.StudyRoomApplication - The following 1 profile is active: "dev"
+2026-01-28 18:48:38 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-28 18:48:38 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-28 18:48:38 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 0 Redis repository interfaces.
+2026-01-28 18:48:39 [main] ERROR org.apache.catalina.core.AprLifecycleListener - An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2026-01-28 18:48:39 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-01-28 18:48:39 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-28 18:48:39 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-28 18:48:39 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-01-28 18:48:39 [main] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-01-28 18:48:39 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2829 ms
+2026-01-28 18:48:39 [main] INFO  org.redisson.Version - Redisson 3.23.5
+2026-01-28 18:48:40 [redisson-netty-2-5] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2026-01-28 18:48:40 [redisson-netty-2-20] INFO  org.redisson.connection.pool.MasterConnectionPool - 24 connections initialized for localhost/127.0.0.1:6379
+2026-01-28 18:48:40 [main] DEBUG c.s.common.security.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-01-28 18:48:40 [main] DEBUG o.s.web.filter.ServerHttpObservationFilter - Filter 'webMvcObservationFilter' configured for use
+2026-01-28 18:48:41 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@1978b0d5'
+2026-01-28 18:48:41 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\admin\AnnouncementMapper.xml]'
+2026-01-28 18:48:41 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-28 18:48:41 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\admin\SystemConfigMapper.xml]'
+2026-01-28 18:48:41 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-28 18:48:41 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\auth\UserMapper.xml]'
+2026-01-28 18:48:41 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-28 18:48:41 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\checkin\CheckInRecordMapper.xml]'
+2026-01-28 18:48:41 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-28 18:48:41 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\notification\NotificationMapper.xml]'
+2026-01-28 18:48:41 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-28 18:48:41 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\reservation\ReservationMapper.xml]'
+2026-01-28 18:48:41 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-28 18:48:41 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\reservation\ReservationRuleMapper.xml]'
+2026-01-28 18:48:41 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-28 18:48:41 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\room\RoomMapper.xml]'
+2026-01-28 18:48:41 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-28 18:48:41 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\room\SeatMapper.xml]'
+2026-01-28 18:48:41 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-28 18:48:41 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\statistics\StatisticsMapper.xml]'
+2026-01-28 18:48:41 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-28 18:48:41 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\user\CreditRecordMapper.xml]'
+2026-01-28 18:48:41 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\user\UserMapper.xml]'
+2026-01-28 18:48:41 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-28 18:48:41 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\violation\ViolationRecordMapper.xml]'
+2026-01-28 18:48:42 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: dba3183a-2713-4b22-8c74-db4d217cc90b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-01-28 18:48:42 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 142 mappings in 'requestMappingHandlerMapping'
+2026-01-28 18:48:44 [main] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui/**, /swagger-ui.html, /swagger-config, /doc.html, /uploads/**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-01-28 18:48:44 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 4 endpoint(s) beneath base path '/actuator'
+2026-01-28 18:48:44 [main] DEBUG com.studyroom.common.config.WebSecurityConfig - Spring Security配置完成
+2026-01-28 18:48:44 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@39acf187, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@643a73fa, org.springframework.security.web.context.SecurityContextHolderFilter@34d0c331, org.springframework.security.web.header.HeaderWriterFilter@544733a4, org.springframework.web.filter.CorsFilter@dd3e1e3, org.springframework.security.web.authentication.logout.LogoutFilter@39921410, com.studyroom.common.security.JwtAuthenticationFilter@612290d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@577f81a0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1256925b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2686a801, org.springframework.security.web.session.SessionManagementFilter@695c8b32, org.springframework.security.web.access.ExceptionTranslationFilter@68cc6319, org.springframework.security.web.access.intercept.AuthorizationFilter@263f6e96]
+2026-01-28 18:48:44 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-01-28 18:48:44 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-01-28 18:48:45 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2026-01-28 18:48:45 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-01-28 18:48:45 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2026-01-28 18:48:45 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2026-01-28 18:48:45 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2026-01-28 18:48:45 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2026-01-28 18:48:45 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2026-01-28 18:48:45 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@f9d8285
+2026-01-28 18:48:45 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-28 18:48:45 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/api'
+2026-01-28 18:48:45 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2026-01-28 18:48:45 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2026-01-28 18:48:45 [main] INFO  com.studyroom.StudyRoomApplication - Started StudyRoomApplication in 9.38 seconds (process running for 10.238)
+2026-01-28 18:48:45 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2026-01-28 18:48:45 [main] INFO  com.studyroom.common.init.AdminUserInitializer - 修复管理员账号角色...
+2026-01-28 18:48:45 [main] INFO  com.studyroom.common.init.AdminUserInitializer - 管理员账号角色修复成功！
+2026-01-28 18:48:50 [http-nio-8080-exec-1] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-28 18:48:50 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-28 18:48:50 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-01-28 18:48:50 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-01-28 18:48:50 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-01-28 18:48:50 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@163d8bf4
+2026-01-28 18:48:50 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@34962296
+2026-01-28 18:48:50 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-01-28 18:48:50 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-01-28 18:48:50 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /auth/captcha?_t=1769597330457
+2026-01-28 18:48:50 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/auth/captcha
+2026-01-28 18:48:50 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-28 18:48:50 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-28 18:48:50 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-28 18:48:50 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-28 18:48:50 [http-nio-8080-exec-1] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-28 18:48:50 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#getCaptcha()
+2026-01-28 18:48:50 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /auth/captcha?_t=1769597330457
+2026-01-28 18:48:50 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/auth/captcha?_t=1769597330457", parameters={masked}
+2026-01-28 18:48:50 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#getCaptcha()
+2026-01-28 18:48:50 [http-nio-8080-exec-1] INFO  c.s.modules.auth.service.impl.AuthServiceImpl - 生成验证码: lEXuEv，key: captcha:9be935fd-84bb-4b50-92b1-42a399764a89
+2026-01-28 18:48:50 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-01-28 18:48:50 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=200, message=操作成功, data={captchaKey=captcha:9be935fd-84bb-4b50-92b1-42a399764a89, captch (truncated)...]
+2026-01-28 18:48:50 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-28 18:48:55 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Securing POST /auth/login
+2026-01-28 18:48:55 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/auth/login
+2026-01-28 18:48:55 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-28 18:48:55 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-28 18:48:55 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-28 18:48:55 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-28 18:48:55 [http-nio-8080-exec-2] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-28 18:48:55 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#login(LoginRequest, HttpServletRequest)
+2026-01-28 18:48:55 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Secured POST /auth/login
+2026-01-28 18:48:55 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/auth/login", parameters={}
+2026-01-28 18:48:55 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#login(LoginRequest, HttpServletRequest)
+2026-01-28 18:48:55 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [LoginRequest(username=12313, password=213124, captchaCode=exuev, captchaKey=captcha:9be935fd-84bb-4b (truncated)...]
+2026-01-28 18:48:55 [http-nio-8080-exec-2] ERROR c.s.modules.auth.service.impl.AuthServiceImpl - Loginrequest = 
+2026-01-28 18:48:55 [http-nio-8080-exec-2] ERROR c.s.modules.auth.service.impl.CaptchaServiceImpl - captchaKey is captcha:9be935fd-84bb-4b50-92b1-42a399764a89
+2026-01-28 18:48:55 [http-nio-8080-exec-2] ERROR c.s.modules.auth.service.impl.CaptchaServiceImpl - captchaCode is exuev
+2026-01-28 18:48:55 [http-nio-8080-exec-2] ERROR c.studyroom.modules.auth.controller.AuthController - 登录业务异常: 缓存服务异常
+2026-01-28 18:48:55 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-01-28 18:48:55 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=30003, message=缓存服务异常, data=null, timestamp=1769597335293)]
+2026-01-28 18:48:55 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-28 18:51:09 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-01-28 18:51:09 [main] INFO  com.studyroom.StudyRoomApplication - Starting StudyRoomApplication using Java 17.0.7 with PID 32496 (F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes started by zzl340 in F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend)
+2026-01-28 18:51:09 [main] DEBUG com.studyroom.StudyRoomApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-01-28 18:51:09 [main] INFO  com.studyroom.StudyRoomApplication - The following 1 profile is active: "dev"
+2026-01-28 18:51:11 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-28 18:51:11 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-28 18:51:11 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 0 Redis repository interfaces.
+2026-01-28 18:51:12 [main] ERROR org.apache.catalina.core.AprLifecycleListener - An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2026-01-28 18:51:12 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-01-28 18:51:12 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-28 18:51:12 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-28 18:51:12 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-01-28 18:51:12 [main] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-01-28 18:51:12 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3604 ms
+2026-01-28 18:51:13 [main] INFO  org.redisson.Version - Redisson 3.23.5
+2026-01-28 18:51:13 [redisson-netty-2-5] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2026-01-28 18:51:14 [redisson-netty-2-20] INFO  org.redisson.connection.pool.MasterConnectionPool - 24 connections initialized for localhost/127.0.0.1:6379
+2026-01-28 18:51:14 [main] DEBUG c.s.common.security.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-01-28 18:51:14 [main] DEBUG o.s.web.filter.ServerHttpObservationFilter - Filter 'webMvcObservationFilter' configured for use
+2026-01-28 18:51:14 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@531299d3'
+2026-01-28 18:51:14 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\admin\AnnouncementMapper.xml]'
+2026-01-28 18:51:14 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-28 18:51:14 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\admin\SystemConfigMapper.xml]'
+2026-01-28 18:51:14 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-28 18:51:14 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\auth\UserMapper.xml]'
+2026-01-28 18:51:14 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-28 18:51:14 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\checkin\CheckInRecordMapper.xml]'
+2026-01-28 18:51:14 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-28 18:51:14 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\notification\NotificationMapper.xml]'
+2026-01-28 18:51:14 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-28 18:51:14 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\reservation\ReservationMapper.xml]'
+2026-01-28 18:51:14 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-28 18:51:14 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\reservation\ReservationRuleMapper.xml]'
+2026-01-28 18:51:14 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-28 18:51:14 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\room\RoomMapper.xml]'
+2026-01-28 18:51:14 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-28 18:51:14 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\room\SeatMapper.xml]'
+2026-01-28 18:51:14 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-28 18:51:14 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\statistics\StatisticsMapper.xml]'
+2026-01-28 18:51:14 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-28 18:51:14 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\user\CreditRecordMapper.xml]'
+2026-01-28 18:51:14 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\user\UserMapper.xml]'
+2026-01-28 18:51:14 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.studyroom.modules.admin.mapper.AnnouncementMapper.selectTest] is ignored, because it exists, maybe from xml file
+2026-01-28 18:51:14 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [F:\林正旭毕业设计\study-room-booking-backend\study-room-booking-backend\target\classes\mapper\violation\ViolationRecordMapper.xml]'
+2026-01-28 18:51:15 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: c39bf975-b285-4882-8142-80e8a4d342df
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-01-28 18:51:15 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 142 mappings in 'requestMappingHandlerMapping'
+2026-01-28 18:51:17 [main] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui/**, /swagger-ui.html, /swagger-config, /doc.html, /uploads/**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-01-28 18:51:17 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 4 endpoint(s) beneath base path '/actuator'
+2026-01-28 18:51:17 [main] DEBUG com.studyroom.common.config.WebSecurityConfig - Spring Security配置完成
+2026-01-28 18:51:17 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5003c114, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6e4bccc, org.springframework.security.web.context.SecurityContextHolderFilter@1e6e29d6, org.springframework.security.web.header.HeaderWriterFilter@2faae7f6, org.springframework.web.filter.CorsFilter@2487b621, org.springframework.security.web.authentication.logout.LogoutFilter@8eeb4c5, com.studyroom.common.security.JwtAuthenticationFilter@35d81657, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5afa0b1a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c167296, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3d2ff73a, org.springframework.security.web.session.SessionManagementFilter@544733a4, org.springframework.security.web.access.ExceptionTranslationFilter@61c0fb12, org.springframework.security.web.access.intercept.AuthorizationFilter@5f01361e]
+2026-01-28 18:51:17 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-01-28 18:51:17 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-01-28 18:51:17 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2026-01-28 18:51:17 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-01-28 18:51:17 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2026-01-28 18:51:17 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2026-01-28 18:51:17 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2026-01-28 18:51:17 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2026-01-28 18:51:17 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2026-01-28 18:51:17 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3903cfc9
+2026-01-28 18:51:18 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-28 18:51:18 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/api'
+2026-01-28 18:51:18 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2026-01-28 18:51:18 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2026-01-28 18:51:18 [main] INFO  com.studyroom.StudyRoomApplication - Started StudyRoomApplication in 9.921 seconds (process running for 10.808)
+2026-01-28 18:51:18 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2026-01-28 18:51:18 [main] INFO  com.studyroom.common.init.AdminUserInitializer - 修复管理员账号角色...
+2026-01-28 18:51:18 [main] INFO  com.studyroom.common.init.AdminUserInitializer - 管理员账号角色修复成功！
+2026-01-28 18:53:02 [http-nio-8080-exec-1] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-28 18:53:02 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-28 18:53:02 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-01-28 18:53:02 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-01-28 18:53:02 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-01-28 18:53:02 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6c2362ed
+2026-01-28 18:53:02 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@3865acf2
+2026-01-28 18:53:02 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-01-28 18:53:02 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-01-28 18:53:02 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /auth/captcha?_t=1769597582369
+2026-01-28 18:53:02 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/auth/captcha
+2026-01-28 18:53:02 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-28 18:53:02 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-28 18:53:02 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-28 18:53:02 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-28 18:53:02 [http-nio-8080-exec-1] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-28 18:53:02 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#getCaptcha()
+2026-01-28 18:53:02 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /auth/captcha?_t=1769597582369
+2026-01-28 18:53:02 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/auth/captcha?_t=1769597582369", parameters={masked}
+2026-01-28 18:53:02 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#getCaptcha()
+2026-01-28 18:53:02 [http-nio-8080-exec-1] INFO  c.s.modules.auth.service.impl.AuthServiceImpl - 生成验证码: gv0584，key: captcha:ca46e3a8-555a-48ee-8562-100f7adbfbd6
+2026-01-28 18:53:02 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-01-28 18:53:02 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=200, message=操作成功, data={captchaKey=captcha:ca46e3a8-555a-48ee-8562-100f7adbfbd6, captch (truncated)...]
+2026-01-28 18:53:02 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-28 18:53:09 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Securing POST /auth/login
+2026-01-28 18:53:09 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/auth/login
+2026-01-28 18:53:09 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-28 18:53:09 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-28 18:53:09 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-28 18:53:09 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-28 18:53:09 [http-nio-8080-exec-2] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-28 18:53:09 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#login(LoginRequest, HttpServletRequest)
+2026-01-28 18:53:09 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Secured POST /auth/login
+2026-01-28 18:53:09 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/auth/login", parameters={}
+2026-01-28 18:53:09 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#login(LoginRequest, HttpServletRequest)
+2026-01-28 18:53:09 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [LoginRequest(username=12313, password=213124, captchaCode=gv0584, captchaKey=captcha:ca46e3a8-555a-4 (truncated)...]
+2026-01-28 18:53:09 [http-nio-8080-exec-2] ERROR c.s.modules.auth.service.impl.AuthServiceImpl - Loginrequest = 
+2026-01-28 18:53:09 [http-nio-8080-exec-2] ERROR c.s.modules.auth.service.impl.CaptchaServiceImpl - captchaKey is captcha:captcha:ca46e3a8-555a-48ee-8562-100f7adbfbd6
+2026-01-28 18:53:09 [http-nio-8080-exec-2] DEBUG c.s.modules.auth.service.impl.CaptchaServiceImpl - 验证码验证成功: key=captcha:captcha:ca46e3a8-555a-48ee-8562-100f7adbfbd6, code=gv0584
+2026-01-28 18:53:09 [http-nio-8080-exec-2] ERROR c.studyroom.modules.auth.controller.AuthController - 登录业务异常: 登录失败，用户名或密码错误
+2026-01-28 18:53:09 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-01-28 18:53:09 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=10001, message=登录失败，用户名或密码错误, data=null, timestamp=1769597589278)]
+2026-01-28 18:53:09 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-28 18:53:40 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /auth/captcha?_t=1769597620190
+2026-01-28 18:53:40 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/auth/captcha
+2026-01-28 18:53:40 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-28 18:53:40 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-28 18:53:40 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-28 18:53:40 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-28 18:53:40 [http-nio-8080-exec-3] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-28 18:53:40 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#getCaptcha()
+2026-01-28 18:53:40 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /auth/captcha?_t=1769597620190
+2026-01-28 18:53:40 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/auth/captcha?_t=1769597620190", parameters={masked}
+2026-01-28 18:53:40 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#getCaptcha()
+2026-01-28 18:53:40 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /auth/captcha?_t=1769597620213
+2026-01-28 18:53:40 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/auth/captcha
+2026-01-28 18:53:40 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-28 18:53:40 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-28 18:53:40 [http-nio-8080-exec-4] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-28 18:53:40 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-28 18:53:40 [http-nio-8080-exec-4] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-28 18:53:40 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#getCaptcha()
+2026-01-28 18:53:40 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /auth/captcha?_t=1769597620213
+2026-01-28 18:53:40 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/auth/captcha?_t=1769597620213", parameters={masked}
+2026-01-28 18:53:40 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#getCaptcha()
+2026-01-28 18:53:40 [http-nio-8080-exec-3] INFO  c.s.modules.auth.service.impl.AuthServiceImpl - 生成验证码: nT3q0n，key: captcha:9e135b3b-b74d-4183-90d0-08113224141c
+2026-01-28 18:53:40 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-01-28 18:53:40 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=200, message=操作成功, data={captchaKey=captcha:9e135b3b-b74d-4183-90d0-08113224141c, captch (truncated)...]
+2026-01-28 18:53:40 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-28 18:53:40 [http-nio-8080-exec-4] INFO  c.s.modules.auth.service.impl.AuthServiceImpl - 生成验证码: ssxlq8，key: captcha:ffadd918-8f8d-40ad-b5e1-6ee4097edc00
+2026-01-28 18:53:40 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-01-28 18:53:40 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=200, message=操作成功, data={captchaKey=captcha:ffadd918-8f8d-40ad-b5e1-6ee4097edc00, captch (truncated)...]
+2026-01-28 18:53:40 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-28 18:54:00 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /favicon.ico
+2026-01-28 18:54:00 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/favicon.ico
+2026-01-28 18:54:00 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-28 18:54:00 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-28 18:54:00 [http-nio-8080-exec-5] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-28 18:54:00 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-28 18:54:00 [http-nio-8080-exec-5] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-28 18:54:00 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-28 18:54:00 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-28 18:54:00 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-28 18:54:00 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-28 18:54:00 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-28 18:54:00 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-28 18:54:00 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-28 18:54:00 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-28 18:54:00 [http-nio-8080-exec-5] WARN  c.s.common.security.JwtAuthenticationEntryPoint - 认证失败: /api/favicon.ico - Full authentication is required to access this resource
+2026-01-28 18:54:30 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /auth/captcha?_t=1769597670700
+2026-01-28 18:54:30 [http-nio-8080-exec-7] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/auth/captcha
+2026-01-28 18:54:30 [http-nio-8080-exec-7] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-28 18:54:30 [http-nio-8080-exec-7] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-28 18:54:30 [http-nio-8080-exec-7] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-28 18:54:30 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-28 18:54:30 [http-nio-8080-exec-7] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-28 18:54:30 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#getCaptcha()
+2026-01-28 18:54:30 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /auth/captcha?_t=1769597670700
+2026-01-28 18:54:30 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/auth/captcha?_t=1769597670700", parameters={masked}
+2026-01-28 18:54:30 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#getCaptcha()
+2026-01-28 18:54:30 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /auth/captcha?_t=1769597670710
+2026-01-28 18:54:30 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/auth/captcha
+2026-01-28 18:54:30 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-28 18:54:30 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-28 18:54:30 [http-nio-8080-exec-8] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-28 18:54:30 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-28 18:54:30 [http-nio-8080-exec-8] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-28 18:54:30 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#getCaptcha()
+2026-01-28 18:54:30 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /auth/captcha?_t=1769597670710
+2026-01-28 18:54:30 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/auth/captcha?_t=1769597670710", parameters={masked}
+2026-01-28 18:54:30 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#getCaptcha()
+2026-01-28 18:54:30 [http-nio-8080-exec-7] INFO  c.s.modules.auth.service.impl.AuthServiceImpl - 生成验证码: Px4RZ9，key: captcha:02b5e7be-8a03-4134-a58b-67076ac371e3
+2026-01-28 18:54:30 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-01-28 18:54:30 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=200, message=操作成功, data={captchaKey=captcha:02b5e7be-8a03-4134-a58b-67076ac371e3, captch (truncated)...]
+2026-01-28 18:54:30 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-28 18:54:30 [http-nio-8080-exec-8] INFO  c.s.modules.auth.service.impl.AuthServiceImpl - 生成验证码: 2bBr45，key: captcha:8d3965c1-00b2-4ad3-ba4c-85427bde5394
+2026-01-28 18:54:30 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-01-28 18:54:30 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=200, message=操作成功, data={captchaKey=captcha:8d3965c1-00b2-4ad3-ba4c-85427bde5394, captch (truncated)...]
+2026-01-28 18:54:30 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-28 18:54:53 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /auth/captcha?_t=1769597693881
+2026-01-28 18:54:53 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/auth/captcha
+2026-01-28 18:54:53 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-28 18:54:53 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-28 18:54:53 [http-nio-8080-exec-9] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-28 18:54:53 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-28 18:54:53 [http-nio-8080-exec-9] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-28 18:54:53 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#getCaptcha()
+2026-01-28 18:54:53 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /auth/captcha?_t=1769597693881
+2026-01-28 18:54:53 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/auth/captcha?_t=1769597693881", parameters={masked}
+2026-01-28 18:54:53 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#getCaptcha()
+2026-01-28 18:54:53 [http-nio-8080-exec-9] INFO  c.s.modules.auth.service.impl.AuthServiceImpl - 生成验证码: 0WosG4，key: captcha:d733fe4d-b0a3-4ac0-aeed-3724d24cfcdc
+2026-01-28 18:54:53 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-01-28 18:54:53 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=200, message=操作成功, data={captchaKey=captcha:d733fe4d-b0a3-4ac0-aeed-3724d24cfcdc, captch (truncated)...]
+2026-01-28 18:54:53 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-28 18:55:01 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Securing POST /auth/login
+2026-01-28 18:55:01 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/auth/login
+2026-01-28 18:55:01 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-28 18:55:01 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-28 18:55:01 [http-nio-8080-exec-10] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-28 18:55:01 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-28 18:55:01 [http-nio-8080-exec-10] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-28 18:55:01 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#login(LoginRequest, HttpServletRequest)
+2026-01-28 18:55:01 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Secured POST /auth/login
+2026-01-28 18:55:01 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/auth/login", parameters={}
+2026-01-28 18:55:01 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#login(LoginRequest, HttpServletRequest)
+2026-01-28 18:55:01 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [LoginRequest(username=testuser, password=123456, captchaCode=owosg4, captchaKey=captcha:d733fe4d-b0a (truncated)...]
+2026-01-28 18:55:01 [http-nio-8080-exec-10] ERROR c.s.modules.auth.service.impl.AuthServiceImpl - Loginrequest = 
+2026-01-28 18:55:01 [http-nio-8080-exec-10] ERROR c.s.modules.auth.service.impl.CaptchaServiceImpl - captchaKey is captcha:captcha:d733fe4d-b0a3-4ac0-aeed-3724d24cfcdc
+2026-01-28 18:55:01 [http-nio-8080-exec-10] ERROR c.studyroom.modules.auth.controller.AuthController - 登录业务异常: 验证码错误
+2026-01-28 18:55:01 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-01-28 18:55:01 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=10008, message=验证码错误, data=null, timestamp=1769597701885)]
+2026-01-28 18:55:01 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-28 18:55:04 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /auth/captcha?_t=1769597704161
+2026-01-28 18:55:04 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/auth/captcha
+2026-01-28 18:55:04 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-28 18:55:04 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-28 18:55:04 [http-nio-8080-exec-1] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-28 18:55:04 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-28 18:55:04 [http-nio-8080-exec-1] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-28 18:55:04 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#getCaptcha()
+2026-01-28 18:55:04 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /auth/captcha?_t=1769597704161
+2026-01-28 18:55:04 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/auth/captcha?_t=1769597704161", parameters={masked}
+2026-01-28 18:55:04 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#getCaptcha()
+2026-01-28 18:55:04 [http-nio-8080-exec-1] INFO  c.s.modules.auth.service.impl.AuthServiceImpl - 生成验证码: AQTGy9，key: captcha:d2c1fb35-c707-4a52-99ba-7b93b5895f6e
+2026-01-28 18:55:04 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-01-28 18:55:04 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=200, message=操作成功, data={captchaKey=captcha:d2c1fb35-c707-4a52-99ba-7b93b5895f6e, captch (truncated)...]
+2026-01-28 18:55:04 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-28 18:55:09 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Securing POST /auth/login
+2026-01-28 18:55:09 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/auth/login
+2026-01-28 18:55:09 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-28 18:55:09 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-28 18:55:09 [http-nio-8080-exec-2] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-28 18:55:09 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-28 18:55:09 [http-nio-8080-exec-2] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-28 18:55:09 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#login(LoginRequest, HttpServletRequest)
+2026-01-28 18:55:09 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Secured POST /auth/login
+2026-01-28 18:55:09 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/auth/login", parameters={}
+2026-01-28 18:55:09 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.studyroom.modules.auth.controller.AuthController#login(LoginRequest, HttpServletRequest)
+2026-01-28 18:55:09 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [LoginRequest(username=testuser, password=123456, captchaCode=aqtgy9, captchaKey=captcha:d2c1fb35-c70 (truncated)...]
+2026-01-28 18:55:09 [http-nio-8080-exec-2] ERROR c.s.modules.auth.service.impl.AuthServiceImpl - Loginrequest = 
+2026-01-28 18:55:09 [http-nio-8080-exec-2] ERROR c.s.modules.auth.service.impl.CaptchaServiceImpl - captchaKey is captcha:captcha:d2c1fb35-c707-4a52-99ba-7b93b5895f6e
+2026-01-28 18:55:09 [http-nio-8080-exec-2] DEBUG c.s.modules.auth.service.impl.CaptchaServiceImpl - 验证码验证成功: key=captcha:captcha:d2c1fb35-c707-4a52-99ba-7b93b5895f6e, code=aqtgy9
+2026-01-28 18:55:09 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-01-28 18:55:09 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=200, message=操作成功, data=LoginResponse(accessToken=eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1Z (truncated)...]
+2026-01-28 18:55:09 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-28 18:55:21 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /favicon.ico
+2026-01-28 18:55:21 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - 开始JWT认证，请求路径: /api/favicon.ico
+2026-01-28 18:55:21 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - 获取到Token: 无
+2026-01-28 18:55:21 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - Token无效或不存在
+2026-01-28 18:55:21 [http-nio-8080-exec-3] DEBUG c.s.common.security.JwtAuthenticationFilter - JWT认证完成，认证状态: false
+2026-01-28 18:55:21 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-28 18:55:21 [http-nio-8080-exec-3] DEBUG o.s.security.web.session.SessionManagementFilter - Request requested invalid session id CD554AA4118CB46E7381E57E577B0387
+2026-01-28 18:55:21 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-28 18:55:21 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-28 18:55:21 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-28 18:55:21 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-28 18:55:21 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-28 18:55:21 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-28 18:55:21 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-28 18:55:21 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-01-28 18:55:21 [http-nio-8080-exec-3] WARN  c.s.common.security.JwtAuthenticationEntryPoint - 认证失败: /api/favicon.ico - Full authentication is required to access this resource

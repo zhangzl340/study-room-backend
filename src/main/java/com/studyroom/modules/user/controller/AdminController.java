@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/admin/admin")
+@RequestMapping("/admin/admin")
 @RequiredArgsConstructor
 @Tag(name = "管理员账户管理接口", description = "管理员账户的创建、更新、删除等操作")
 public class AdminController {

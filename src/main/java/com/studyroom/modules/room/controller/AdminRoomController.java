@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/admin/room")
+@RequestMapping("/admin/room")
 @RequiredArgsConstructor
 @Tag(name = "自习室管理接口(管理员可用)", description = "自习室创建更新管理")
 public class AdminRoomController {

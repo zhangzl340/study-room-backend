@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/student/checkin")
+@RequestMapping("/student/checkin")
 @RequiredArgsConstructor
 @Tag(name = "学生签到接口", description = "学生签到签退暂离操作")
 public class StudentCheckInController {

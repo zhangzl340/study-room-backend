@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/admin/checkin")
+@RequestMapping("/admin/checkin")
 @RequiredArgsConstructor
 @Tag(name = "签到管理接口(管理员可用)", description = "签到记录查询统计管理")
 public class CheckInController {

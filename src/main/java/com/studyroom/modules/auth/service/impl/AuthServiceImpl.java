@@ -17,6 +17,7 @@ import com.studyroom.modules.auth.dto.response.RefreshTokenResponse;
 import com.studyroom.modules.auth.dto.response.VerifyIdentityResponse;
 import com.studyroom.modules.auth.dto.response.UserInfoResponse;
 import com.studyroom.modules.auth.service.AuthService;
+import com.studyroom.modules.auth.service.CaptchaService;
 import com.studyroom.modules.user.entity.User;
 import com.studyroom.modules.user.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -41,13 +42,16 @@ public class AuthServiceImpl implements AuthService {
     private final UserService userService;
     private final JwtUtils jwtUtils;
     private final RedisUtils redisUtils;
-
+    private final CaptchaService captchaService;
     @Value("${study-room.jwt.expiration}")
     private Long expiration;
 
     @Override
     @Transactional(rollbackFor = Exception.class)
     public LoginResponse login(LoginRequest request, String ip) {
+        log.error("Loginrequest = ",request.toString());
+        captchaService.validateCaptcha(request.getCaptchaKey(),request.getCaptchaCode());
+
         User user = userService.getUserByUsername(request.getUsername());
         if (user == null) {
             throw new BusinessException(ErrorCode.LOGIN_FAILED);
@@ -445,4 +449,6 @@ public class AuthServiceImpl implements AuthService {
             throw new BusinessException(ErrorCode.SYSTEM_ERROR, "重置密码失败");
         }
     }
+
+
 }

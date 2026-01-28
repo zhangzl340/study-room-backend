@@ -20,7 +20,7 @@ import java.util.Map;
 
 @Slf4j
 @RestController
-@RequestMapping("/api/admin/statistics")
+@RequestMapping("/admin/statistics")
 @RequiredArgsConstructor
 @Tag(name = "统计分析接口", description = "系统统计分析相关接口")
 public class StatisticsController {

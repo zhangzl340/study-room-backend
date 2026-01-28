@@ -15,4 +15,12 @@ public class LoginRequest {
     @NotBlank(message = "密码不能为空")
     @Schema(description = "密码", required = true)
     private String password;
+
+    @NotBlank(message = "验证码不能为空")
+    @Schema(description = "验证码",required = true)
+    private String captchaCode;
+
+    @NotBlank(message = "验证码key不能为空")
+    @Schema(description = "验证码key（从获取验证码接口返回）", required = true)
+    private String captchaKey;
 }
