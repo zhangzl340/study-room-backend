@@ -10,6 +10,7 @@ import com.studyroom.modules.checkin.service.CheckInService;
 import com.studyroom.modules.checkin.vo.CheckInRecordVO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,14 +26,14 @@ public class StudentCheckInController {
 
     @PostMapping("/in")
     @Operation(summary = "签到")
-    public Result<CheckInResponse> checkIn(@RequestBody CheckInRequest request, 
+    public Result<CheckInResponse> checkIn(@Valid @RequestBody CheckInRequest request, 
                                          @RequestAttribute("userId") Long userId) {
         return Result.success(checkInService.checkIn(request, userId));
     }
 
     @PostMapping("/out")
     @Operation(summary = "签退")
-    public Result<?> checkOut(@RequestBody CheckOutRequest request, 
+    public Result<?> checkOut(@Valid @RequestBody CheckOutRequest request, 
                              @RequestAttribute("userId") Long userId) {
         checkInService.checkOut(request, userId);
         return Result.success("签退成功");
@@ -40,7 +41,7 @@ public class StudentCheckInController {
 
     @PostMapping("/leave")
     @Operation(summary = "暂离")
-    public Result<?> temporaryLeave(@RequestBody LeaveRequest request, 
+    public Result<?> temporaryLeave(@Valid @RequestBody LeaveRequest request, 
                                   @RequestAttribute("userId") Long userId) {
         checkInService.temporaryLeave(request, userId);
         return Result.success("暂离成功");
@@ -48,7 +49,7 @@ public class StudentCheckInController {
 
     @PostMapping("/return")
     @Operation(summary = "回来")
-    public Result<?> returnFromLeave(@RequestBody LeaveRequest request, 
+    public Result<?> returnFromLeave(@Valid @RequestBody LeaveRequest request, 
                                    @RequestAttribute("userId") Long userId) {
         checkInService.returnFromLeave(request, userId);
         return Result.success("回来成功");

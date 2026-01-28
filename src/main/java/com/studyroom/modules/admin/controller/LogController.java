@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/admin/logs")
+@RequestMapping("/admin/logs")
 @RequiredArgsConstructor
 @Tag(name = "日志管理接口", description = "系统日志的查询和管理")
 public class LogController {

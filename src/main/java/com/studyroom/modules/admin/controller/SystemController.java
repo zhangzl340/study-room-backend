@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/admin/settings")
+@RequestMapping("/admin/settings")
 @RequiredArgsConstructor
 @Tag(name = "系统设置接口", description = "系统设置和预约规则的管理")
 public class SystemController {

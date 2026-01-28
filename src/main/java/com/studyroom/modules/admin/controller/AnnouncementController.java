@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/admin/announcements")
+@RequestMapping("/admin/announcements")
 @RequiredArgsConstructor
 @Tag(name = "公告管理接口", description = "公告的创建、更新、删除等操作")
 public class AnnouncementController {

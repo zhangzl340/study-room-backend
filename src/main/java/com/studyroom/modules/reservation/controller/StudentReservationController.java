@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/student/reservation")
+@RequestMapping("/student/reservation")
 @RequiredArgsConstructor
 @Tag(name = "学生预约接口", description = "学生预约创建取消操作")
 public class StudentReservationController {

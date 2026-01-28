@@ -14,7 +14,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/admin/user")
+@RequestMapping("/admin/user")
 @RequiredArgsConstructor
 @Tag(name = "管理端用户接口", description = "用户管理相关接口")
 public class AdminUserController {

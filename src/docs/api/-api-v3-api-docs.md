@@ -2101,7 +2101,7 @@
 ## 批量导入管理员
 
 
-**接口地址**:`/api/api/admin/admin/batch-import`
+**接口地址**:`/api/admin/admin/batch-import`
 
 
 **请求方式**:`POST`
@@ -2224,7 +2224,7 @@
 ## 创建管理员账户
 
 
-**接口地址**:`/api/api/admin/admin/create`
+**接口地址**:`/api/admin/admin/create`
 
 
 **请求方式**:`POST`
@@ -2342,7 +2342,7 @@
 ## 删除管理员账户
 
 
-**接口地址**:`/api/api/admin/admin/delete/{id}`
+**接口地址**:`/api/admin/admin/delete/{id}`
 
 
 **请求方式**:`DELETE`
@@ -2431,7 +2431,7 @@
 ## 获取管理员详情
 
 
-**接口地址**:`/api/api/admin/admin/detail/{id}`
+**接口地址**:`/api/admin/admin/detail/{id}`
 
 
 **请求方式**:`GET`
@@ -2567,7 +2567,7 @@
 ## 获取管理员列表
 
 
-**接口地址**:`/api/api/admin/admin/list`
+**接口地址**:`/api/admin/admin/list`
 
 
 **请求方式**:`GET`
@@ -2719,7 +2719,7 @@
 ## 重置管理员密码
 
 
-**接口地址**:`/api/api/admin/admin/reset-password/{id}`
+**接口地址**:`/api/admin/admin/reset-password/{id}`
 
 
 **请求方式**:`PUT`
@@ -2809,7 +2809,7 @@
 ## 更新管理员状态
 
 
-**接口地址**:`/api/api/admin/admin/status/{id}`
+**接口地址**:`/api/admin/admin/status/{id}`
 
 
 **请求方式**:`PUT`
@@ -2899,7 +2899,7 @@
 ## 更新管理员信息
 
 
-**接口地址**:`/api/api/admin/admin/update/{id}`
+**接口地址**:`/api/admin/admin/update/{id}`
 
 
 **请求方式**:`PUT`
@@ -3017,7 +3017,7 @@
 ## 清理超时签到
 
 
-**接口地址**:`/api/api/admin/checkin/cleanup`
+**接口地址**:`/api/admin/checkin/cleanup`
 
 
 **请求方式**:`POST`
@@ -3104,7 +3104,7 @@
 ## 获取签到记录详情
 
 
-**接口地址**:`/api/api/admin/checkin/detail/{id}`
+**接口地址**:`/api/admin/checkin/detail/{id}`
 
 
 **请求方式**:`GET`
@@ -3230,7 +3230,7 @@
 ## 获取签到记录列表
 
 
-**接口地址**:`/api/api/admin/checkin/list`
+**接口地址**:`/api/admin/checkin/list`
 
 
 **请求方式**:`GET`
@@ -3358,7 +3358,7 @@
 ## 获取签到统计
 
 
-**接口地址**:`/api/api/admin/checkin/statistics`
+**接口地址**:`/api/admin/checkin/statistics`
 
 
 **请求方式**:`GET`
@@ -3660,7 +3660,9 @@
 ```javascript
 {
   "username": "",
-  "password": ""
+  "password": "",
+  "captchaCode": "",
+  "captchaKey": ""
 }
 ```
 
@@ -3673,6 +3675,8 @@
 |loginRequest|登录请求|body|true|LoginRequest|LoginRequest|
 |&emsp;&emsp;username|用户名||true|string||
 |&emsp;&emsp;password|密码||true|string||
+|&emsp;&emsp;captchaCode|验证码||true|string||
+|&emsp;&emsp;captchaKey|验证码key（从获取验证码接口返回）||true|string||
 
 
 **响应状态**:
@@ -5050,7 +5054,7 @@
 ## 导出统计数据
 
 
-**接口地址**:`/api/api/admin/statistics/export`
+**接口地址**:`/api/admin/statistics/export`
 
 
 **请求方式**:`POST`
@@ -5175,7 +5179,7 @@
 ## 获取预约热力图数据
 
 
-**接口地址**:`/api/api/admin/statistics/heatmap`
+**接口地址**:`/api/admin/statistics/heatmap`
 
 
 **请求方式**:`GET`
@@ -5265,7 +5269,7 @@
 ## 获取房间平均使用时长
 
 
-**接口地址**:`/api/api/admin/statistics/room/average-time`
+**接口地址**:`/api/admin/statistics/room/average-time`
 
 
 **请求方式**:`GET`
@@ -5363,7 +5367,7 @@
 ## 获取房间预约取消率
 
 
-**接口地址**:`/api/api/admin/statistics/room/cancellation`
+**接口地址**:`/api/admin/statistics/room/cancellation`
 
 
 **请求方式**:`GET`
@@ -5461,7 +5465,7 @@
 ## 获取房间类型分布
 
 
-**接口地址**:`/api/api/admin/statistics/room/distribution`
+**接口地址**:`/api/admin/statistics/room/distribution`
 
 
 **请求方式**:`GET`
@@ -5548,7 +5552,7 @@
 ## 获取房间高峰期分析
 
 
-**接口地址**:`/api/api/admin/statistics/room/peak`
+**接口地址**:`/api/admin/statistics/room/peak`
 
 
 **请求方式**:`GET`
@@ -5646,7 +5650,7 @@
 ## 获取房间使用率排名
 
 
-**接口地址**:`/api/api/admin/statistics/room/rank`
+**接口地址**:`/api/admin/statistics/room/rank`
 
 
 **请求方式**:`GET`
@@ -5744,7 +5748,7 @@
 ## 获取房间座位使用情况
 
 
-**接口地址**:`/api/api/admin/statistics/room/seat`
+**接口地址**:`/api/admin/statistics/room/seat`
 
 
 **请求方式**:`GET`
@@ -5842,7 +5846,7 @@
 ## 获取房间每日使用趋势
 
 
-**接口地址**:`/api/api/admin/statistics/room/trend`
+**接口地址**:`/api/admin/statistics/room/trend`
 
 
 **请求方式**:`GET`
@@ -5932,7 +5936,7 @@
 ## 获取房间使用情况统计
 
 
-**接口地址**:`/api/api/admin/statistics/room/usage`
+**接口地址**:`/api/admin/statistics/room/usage`
 
 
 **请求方式**:`GET`
@@ -6030,7 +6034,7 @@
 ## 生成统计快照
 
 
-**接口地址**:`/api/api/admin/statistics/snapshot/generate`
+**接口地址**:`/api/admin/statistics/snapshot/generate`
 
 
 **请求方式**:`POST`
@@ -6117,7 +6121,7 @@
 ## 获取每日统计快照
 
 
-**接口地址**:`/api/api/admin/statistics/snapshots`
+**接口地址**:`/api/admin/statistics/snapshots`
 
 
 **请求方式**:`GET`
@@ -6207,7 +6211,7 @@
 ## 获取系统总体统计数据
 
 
-**接口地址**:`/api/api/admin/statistics/system`
+**接口地址**:`/api/admin/statistics/system`
 
 
 **请求方式**:`GET`
@@ -6294,7 +6298,7 @@
 ## 获取时间段使用统计
 
 
-**接口地址**:`/api/api/admin/statistics/time-slot`
+**接口地址**:`/api/admin/statistics/time-slot`
 
 
 **请求方式**:`GET`
@@ -6392,7 +6396,7 @@
 ## 获取用户平均使用时长
 
 
-**接口地址**:`/api/api/admin/statistics/user/average-time`
+**接口地址**:`/api/admin/statistics/user/average-time`
 
 
 **请求方式**:`GET`
@@ -6490,7 +6494,7 @@
 ## 获取用户预约行为分析
 
 
-**接口地址**:`/api/api/admin/statistics/user/behavior`
+**接口地址**:`/api/admin/statistics/user/behavior`
 
 
 **请求方式**:`GET`
@@ -6588,7 +6592,7 @@
 ## 获取用户信用分分布
 
 
-**接口地址**:`/api/api/admin/statistics/user/credit`
+**接口地址**:`/api/admin/statistics/user/credit`
 
 
 **请求方式**:`GET`
@@ -6675,7 +6679,7 @@
 ## 获取用户类型分布
 
 
-**接口地址**:`/api/api/admin/statistics/user/distribution`
+**接口地址**:`/api/admin/statistics/user/distribution`
 
 
 **请求方式**:`GET`
@@ -6762,7 +6766,7 @@
 ## 获取用户增长趋势
 
 
-**接口地址**:`/api/api/admin/statistics/user/growth`
+**接口地址**:`/api/admin/statistics/user/growth`
 
 
 **请求方式**:`GET`
@@ -6852,7 +6856,7 @@
 ## 获取用户画像分析
 
 
-**接口地址**:`/api/api/admin/statistics/user/profile`
+**接口地址**:`/api/admin/statistics/user/profile`
 
 
 **请求方式**:`GET`
@@ -6939,7 +6943,7 @@
 ## 获取用户活跃度排名
 
 
-**接口地址**:`/api/api/admin/statistics/user/rank`
+**接口地址**:`/api/admin/statistics/user/rank`
 
 
 **请求方式**:`GET`
@@ -7037,7 +7041,7 @@
 ## 获取用户留存率分析
 
 
-**接口地址**:`/api/api/admin/statistics/user/retention`
+**接口地址**:`/api/admin/statistics/user/retention`
 
 
 **请求方式**:`GET`
@@ -7127,7 +7131,7 @@
 ## 获取用户使用情况统计
 
 
-**接口地址**:`/api/api/admin/statistics/user/usage`
+**接口地址**:`/api/admin/statistics/user/usage`
 
 
 **请求方式**:`GET`
@@ -7225,7 +7229,7 @@
 ## 获取用户违规情况统计
 
 
-**接口地址**:`/api/api/admin/statistics/user/violation`
+**接口地址**:`/api/admin/statistics/user/violation`
 
 
 **请求方式**:`GET`
@@ -7326,7 +7330,7 @@
 ## 获取违规记录详情
 
 
-**接口地址**:`/api/api/admin/violation/detail/{id}`
+**接口地址**:`/api/admin/violation/detail/{id}`
 
 
 **请求方式**:`GET`
@@ -7444,7 +7448,7 @@
 ## 处理违规
 
 
-**接口地址**:`/api/api/admin/violation/handle`
+**接口地址**:`/api/admin/violation/handle`
 
 
 **请求方式**:`POST`
@@ -7552,7 +7556,7 @@
 ## 获取违规记录列表
 
 
-**接口地址**:`/api/api/admin/violation/list`
+**接口地址**:`/api/admin/violation/list`
 
 
 **请求方式**:`GET`
@@ -7672,7 +7676,7 @@
 ## 记录违规
 
 
-**接口地址**:`/api/api/admin/violation/record`
+**接口地址**:`/api/admin/violation/record`
 
 
 **请求方式**:`POST`
@@ -7800,7 +7804,7 @@
 ## 获取违规统计
 
 
-**接口地址**:`/api/api/admin/violation/statistics`
+**接口地址**:`/api/admin/violation/statistics`
 
 
 **请求方式**:`GET`
@@ -7887,7 +7891,7 @@
 ## 获取用户违规记录
 
 
-**接口地址**:`/api/api/admin/violation/user/{userId}`
+**接口地址**:`/api/admin/violation/user/{userId}`
 
 
 **请求方式**:`GET`
@@ -8679,7 +8683,7 @@
 ## 获取当前签到信息
 
 
-**接口地址**:`/api/api/student/checkin/current`
+**接口地址**:`/api/student/checkin/current`
 
 
 **请求方式**:`GET`
@@ -8803,7 +8807,7 @@
 ## 获取签到记录详情
 
 
-**接口地址**:`/api/api/student/checkin/detail/{id}`
+**接口地址**:`/api/student/checkin/detail/{id}`
 
 
 **请求方式**:`GET`
@@ -8929,7 +8933,7 @@
 ## 签到
 
 
-**接口地址**:`/api/api/student/checkin/in`
+**接口地址**:`/api/student/checkin/in`
 
 
 **请求方式**:`POST`
@@ -9050,7 +9054,7 @@
 ## 暂离
 
 
-**接口地址**:`/api/api/student/checkin/leave`
+**接口地址**:`/api/student/checkin/leave`
 
 
 **请求方式**:`POST`
@@ -9154,7 +9158,7 @@
 ## 获取用户签到记录
 
 
-**接口地址**:`/api/api/student/checkin/list`
+**接口地址**:`/api/student/checkin/list`
 
 
 **请求方式**:`GET`
@@ -9280,7 +9284,7 @@
 ## 签退
 
 
-**接口地址**:`/api/api/student/checkin/out`
+**接口地址**:`/api/student/checkin/out`
 
 
 **请求方式**:`POST`
@@ -9382,7 +9386,7 @@
 ## 生成签到二维码
 
 
-**接口地址**:`/api/api/student/checkin/qrcode`
+**接口地址**:`/api/student/checkin/qrcode`
 
 
 **请求方式**:`GET`
@@ -9478,7 +9482,7 @@
 ## 回来
 
 
-**接口地址**:`/api/api/student/checkin/return`
+**接口地址**:`/api/student/checkin/return`
 
 
 **请求方式**:`POST`
@@ -9582,7 +9586,7 @@
 ## 验证签到二维码
 
 
-**接口地址**:`/api/api/student/checkin/verify-qrcode`
+**接口地址**:`/api/student/checkin/verify-qrcode`
 
 
 **请求方式**:`POST`
@@ -11079,7 +11083,7 @@
 ## 清理过期预约
 
 
-**接口地址**:`/api/api/admin/reservation/cleanup`
+**接口地址**:`/api/admin/reservation/cleanup`
 
 
 **请求方式**:`POST`
@@ -11166,7 +11170,7 @@
 ## 获取预约详情
 
 
-**接口地址**:`/api/api/admin/reservation/detail/{id}`
+**接口地址**:`/api/admin/reservation/detail/{id}`
 
 
 **请求方式**:`GET`
@@ -11316,7 +11320,7 @@
 ## 获取预约列表
 
 
-**接口地址**:`/api/api/admin/reservation/list`
+**接口地址**:`/api/admin/reservation/list`
 
 
 **请求方式**:`GET`
@@ -11475,7 +11479,7 @@
 ## 获取预约统计
 
 
-**接口地址**:`/api/api/admin/reservation/statistics`
+**接口地址**:`/api/admin/reservation/statistics`
 
 
 **请求方式**:`GET`
@@ -11562,7 +11566,7 @@
 ## 更新预约状态
 
 
-**接口地址**:`/api/api/admin/reservation/status/{id}`
+**接口地址**:`/api/admin/reservation/status/{id}`
 
 
 **请求方式**:`PUT`
@@ -11655,7 +11659,7 @@
 ## 获取可用自习室
 
 
-**接口地址**:`/api/api/admin/room/available`
+**接口地址**:`/api/admin/room/available`
 
 
 **请求方式**:`GET`
@@ -11803,7 +11807,7 @@
 ## 创建自习室
 
 
-**接口地址**:`/api/api/admin/room/create`
+**接口地址**:`/api/admin/room/create`
 
 
 **请求方式**:`POST`
@@ -11943,7 +11947,7 @@
 ## 删除自习室
 
 
-**接口地址**:`/api/api/admin/room/delete/{id}`
+**接口地址**:`/api/admin/room/delete/{id}`
 
 
 **请求方式**:`DELETE`
@@ -12032,7 +12036,7 @@
 ## 获取自习室详情
 
 
-**接口地址**:`/api/api/admin/room/detail/{id}`
+**接口地址**:`/api/admin/room/detail/{id}`
 
 
 **请求方式**:`GET`
@@ -12180,7 +12184,7 @@
 ## 获取自习室列表
 
 
-**接口地址**:`/api/api/admin/room/list`
+**接口地址**:`/api/admin/room/list`
 
 
 **请求方式**:`GET`
@@ -12334,7 +12338,7 @@
 ## 获取自习室状态
 
 
-**接口地址**:`/api/api/admin/room/status/{id}`
+**接口地址**:`/api/admin/room/status/{id}`
 
 
 **请求方式**:`GET`
@@ -12423,7 +12427,7 @@
 ## 更新自习室状态
 
 
-**接口地址**:`/api/api/admin/room/status/{id}`
+**接口地址**:`/api/admin/room/status/{id}`
 
 
 **请求方式**:`PUT`
@@ -12513,7 +12517,7 @@
 ## 更新自习室
 
 
-**接口地址**:`/api/api/admin/room/update/{id}`
+**接口地址**:`/api/admin/room/update/{id}`
 
 
 **请求方式**:`PUT`
@@ -12657,7 +12661,7 @@
 ## 获取自习室可用座位
 
 
-**接口地址**:`/api/api/room/{roomId}/available-seats`
+**接口地址**:`/api/room/{roomId}/available-seats`
 
 
 **请求方式**:`GET`
@@ -12799,7 +12803,7 @@
 ## 获取自习室统计信息
 
 
-**接口地址**:`/api/api/room/{roomId}/seat-statistics`
+**接口地址**:`/api/room/{roomId}/seat-statistics`
 
 
 **请求方式**:`GET`
@@ -12888,7 +12892,7 @@
 ## 获取自习室座位信息
 
 
-**接口地址**:`/api/api/room/{roomId}/seats`
+**接口地址**:`/api/room/{roomId}/seats`
 
 
 **请求方式**:`GET`
@@ -13030,7 +13034,7 @@
 ## 获取可用自习室
 
 
-**接口地址**:`/api/api/room/available`
+**接口地址**:`/api/room/available`
 
 
 **请求方式**:`GET`
@@ -13178,7 +13182,7 @@
 ## 获取自习室详情
 
 
-**接口地址**:`/api/api/room/detail/{id}`
+**接口地址**:`/api/room/detail/{id}`
 
 
 **请求方式**:`GET`
@@ -13326,7 +13330,7 @@
 ## 获取自习室列表
 
 
-**接口地址**:`/api/api/room/list`
+**接口地址**:`/api/room/list`
 
 
 **请求方式**:`GET`
@@ -13474,7 +13478,7 @@
 ## 获取自习室状态
 
 
-**接口地址**:`/api/api/room/status/{id}`
+**接口地址**:`/api/room/status/{id}`
 
 
 **请求方式**:`GET`

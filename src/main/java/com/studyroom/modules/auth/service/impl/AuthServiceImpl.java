@@ -88,16 +88,21 @@ public class AuthServiceImpl implements AuthService {
 
         userService.updateLastLogin(user.getId(), ip);
 
-        return LoginResponse.builder()
-                .accessToken(accessToken)
-                .refreshToken(refreshToken)
-                .tokenType("Bearer")
-                .expiresIn(expiration / 1000)
+        // 构建用户信息
+        com.studyroom.modules.auth.dto.response.UserInfo userInfo = com.studyroom.modules.auth.dto.response.UserInfo.builder()
                 .userId(user.getId())
                 .username(user.getUsername())
                 .role(user.getRoleType())
                 .realName(user.getRealName())
                 .avatar(user.getAvatar())
+                .build();
+
+        return LoginResponse.builder()
+                .accessToken(accessToken)
+                .refreshToken(refreshToken)
+                .tokenType("Bearer")
+                .expiresIn(expiration / 1000)
+                .userInfo(userInfo)
                 .build();
     }
 
